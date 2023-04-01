@@ -1,0 +1,11 @@
+{
+    "id": "iotthingsgraph",
+    "name": "IoT Things Graph",
+    "url": "/thingsgraph/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Easily connect devices and web services to build IoT applications",
+    "search_terms": [],
+    "sub_services": []
+}

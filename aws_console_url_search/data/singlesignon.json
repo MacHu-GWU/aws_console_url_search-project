@@ -1,0 +1,11 @@
+{
+    "id": "singlesignon",
+    "name": "Single Sign-On",
+    "url": "/singlesignon/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": "SSO",
+    "description": "Manage Single Sign-On (SSO) Access to AWS Accounts and Business Applications",
+    "search_terms": [],
+    "sub_services": []
+}

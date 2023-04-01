@@ -1,0 +1,11 @@
+{
+    "id": "iotdevicemanagement",
+    "name": "IoT Device Management",
+    "url": "/iotdm/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Securely Manage Fleets as Small as One Device, or as Broad as Millions of Devices",
+    "search_terms": [],
+    "sub_services": []
+}

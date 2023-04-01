@@ -1,0 +1,68 @@
+{
+    "id": "medialive",
+    "name": "MediaLive",
+    "url": "/medialive/home#!/inputs",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Convert video inputs into live outputs for broadcast and streaming delivery",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "inputs",
+            "name": "Inputs",
+            "url": "/medialive/home#!/inputs",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "inputsecuritygroups",
+            "name": "Input security groups",
+            "url": "/medialive/home#!/inputSecurityGroups",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "channels",
+            "name": "Channels",
+            "url": "/medialive/home#!/channels",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "devices",
+            "name": "Devices",
+            "url": "/medialive/home#!/devices",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "multiplexes",
+            "name": "Multiplexes",
+            "url": "/medialive/multiplex#/",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "reservations",
+            "name": "Reservations",
+            "url": "/medialive/home#!/reservations",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "workflowwizard",
+            "name": "Workflow Wizard",
+            "url": "/medialive/home#!/workflows",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

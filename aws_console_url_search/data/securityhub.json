@@ -1,0 +1,11 @@
+{
+    "id": "securityhub",
+    "name": "Security Hub",
+    "url": "/securityhub/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "AWS\u2019s security and compliance center",
+    "search_terms": [],
+    "sub_services": []
+}

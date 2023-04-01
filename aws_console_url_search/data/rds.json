@@ -1,0 +1,124 @@
+{
+    "id": "rds",
+    "name": "Relational Database Service",
+    "url": "/rds/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": "RDS",
+    "description": "Managed Relational Database Service",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "dashboard",
+            "name": "Dashboard",
+            "url": "/rds/home#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "databases",
+            "name": "Databases",
+            "url": "/rds/home#databases:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "queryeditor",
+            "name": "Query Editor",
+            "url": "/rds/home#query-editor:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "performanceinsights",
+            "name": "Performance Insights",
+            "url": "/rds/home#performance-insights-v20206:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "snapshots",
+            "name": "Snapshots",
+            "url": "/rds/home#snapshots-list:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "automatedbackups",
+            "name": "Automated backups",
+            "url": "/rds/home#automatedbackups:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "reservedinstances",
+            "name": "Reserved instances",
+            "url": "/rds/home#reserved-instance-list:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "proxies",
+            "name": "Proxies",
+            "url": "/rds/home#proxies:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "subnetgroups",
+            "name": "Subnet groups",
+            "url": "/rds/home#db-subnet-groups-list:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "optiongroups",
+            "name": "Option groups",
+            "url": "/rds/home#option-groups-list:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "events",
+            "name": "Events",
+            "url": "/rds/home#event-list:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "eventsubscriptions",
+            "name": "Event subscriptions",
+            "url": "/rds/home#event-subscriptions:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "recommendations",
+            "name": "Recommendations",
+            "url": "/rds/home#recommendations:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "certificateupdate",
+            "name": "Certificate update",
+            "url": "/rds/home#ca-cert-update:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

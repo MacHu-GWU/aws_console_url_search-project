@@ -1,0 +1,11 @@
+{
+    "id": "cognito",
+    "name": "Cognito",
+    "url": "/cognito/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "User Identity and App Data Synchronization",
+    "search_terms": [],
+    "sub_services": []
+}

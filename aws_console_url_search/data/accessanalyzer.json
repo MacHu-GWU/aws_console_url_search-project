@@ -1,0 +1,36 @@
+{
+    "id": "accessanalyzer",
+    "name": "Access Analyzer",
+    "url": "/access-analyzer/home#/rules",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Monitor access to resources",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "archiverules",
+            "name": "Archive rules",
+            "url": "/access-analyzer/home#/rules",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "analyzers",
+            "name": "Analyzers",
+            "url": "/access-analyzer/home#/analyzers",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "settings",
+            "name": "Settings",
+            "url": "/access-analyzer/home#/settings",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

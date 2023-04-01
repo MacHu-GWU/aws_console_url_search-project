@@ -1,0 +1,11 @@
+{
+    "id": "transcribe",
+    "name": "Transcribe",
+    "url": "/transcribe/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Powerful Speech Recognition",
+    "search_terms": [],
+    "sub_services": []
+}

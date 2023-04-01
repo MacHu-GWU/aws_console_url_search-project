@@ -1,0 +1,36 @@
+{
+    "id": "fsx",
+    "name": "FSx",
+    "url": "/fsx/home#file-systems",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Fully managed third-party file systems optimized for a variety of workloads",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "filesystems",
+            "name": "File systems",
+            "url": "/fsx/home#file-systems",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "backups",
+            "name": "Backups",
+            "url": "/fsx/home#backups",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "datarepositorytasks",
+            "name": "Data repository tasks",
+            "url": "/fsx/home#data-repository-tasks",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

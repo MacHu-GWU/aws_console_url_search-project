@@ -1,0 +1,36 @@
+{
+    "id": "kms",
+    "name": "Key Management Service",
+    "url": "/kms/home#/kms/defaultKeys",
+    "regional": true,
+    "weight": 1,
+    "short_name": "KMS",
+    "description": "Securely Generate and Manage AWS Encryption Keys",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "awsmanagedkeys",
+            "name": "AWS managed keys",
+            "url": "/kms/home#/kms/defaultKeys",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "customermanagedkeys",
+            "name": "Customer managed keys",
+            "url": "/kms/home#/kms/keys",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "customkeystores",
+            "name": "Custom key stores",
+            "url": "/kms/home#/kms/customStores",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

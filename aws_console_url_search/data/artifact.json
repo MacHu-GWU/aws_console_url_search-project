@@ -1,0 +1,28 @@
+{
+    "id": "artifact",
+    "name": "Artifact",
+    "url": "/artifact/home",
+    "regional": false,
+    "weight": 1,
+    "short_name": null,
+    "description": "AWS Compliance Reports and Agreements",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "agreements",
+            "name": "Agreements",
+            "url": "/artifact/agreements/accounts",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "reports",
+            "name": "Reports",
+            "url": "/artifact/reports",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

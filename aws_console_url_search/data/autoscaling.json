@@ -1,0 +1,11 @@
+{
+    "id": "autoscaling",
+    "name": "Auto Scaling",
+    "url": "/awsautoscaling/home#dashboard",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "AWS Auto Scaling enables you to quickly scale your entire application on AWS",
+    "search_terms": [],
+    "sub_services": []
+}

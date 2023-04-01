@@ -37,7 +37,7 @@ class SubService(BaseModel):
     id: str = dataclasses.field()
     name: str = dataclasses.field()
     url: str = dataclasses.field()
-    weight: int = dataclasses.field(default=1)
+    weight: int = dataclasses.field(default=1) # 1 - 100
     short_name: T.Optional[str] = dataclasses.field(default=None)
     search_terms: T.List[str] = dataclasses.field(default_factory=list)
 
@@ -64,7 +64,7 @@ class MainService(BaseModel):
     name: str = dataclasses.field()
     url: str = dataclasses.field()
     regional: bool = dataclasses.field(default=True)
-    weight: int = dataclasses.field(default=1)
+    weight: int = dataclasses.field(default=1) # 1 - 1000
     short_name: T.Optional[str] = dataclasses.field(default=None)
     description: T.Optional[str] = dataclasses.field(default=None)
     search_terms: T.List[str] = dataclasses.field(default_factory=list)

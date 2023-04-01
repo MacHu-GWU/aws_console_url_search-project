@@ -1,0 +1,44 @@
+{
+    "id": "lambda",
+    "name": "Lambda",
+    "url": "/lambda/home#/discover",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Run Code without Thinking about Servers",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "dashboard",
+            "name": "Dashboard",
+            "url": "/lambda/home#/discover",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "applications",
+            "name": "Applications",
+            "url": "/lambda/home#/applications",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "functions",
+            "name": "Functions",
+            "url": "/lambda/home#/functions",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "layers",
+            "name": "Layers",
+            "url": "/lambda/home#/layers",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

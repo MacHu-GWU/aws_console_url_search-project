@@ -1,0 +1,68 @@
+{
+    "id": "ec2imagebuilder",
+    "name": "EC2 Image Builder",
+    "url": "/imagebuilder/home#/pipelines",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "A managed service to automate build, customize and deploy OS images",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "imagepipelines",
+            "name": "Image pipelines",
+            "url": "/imagebuilder/home#/pipelines",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "images",
+            "name": "Images",
+            "url": "/imagebuilder/home#/images",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "components",
+            "name": "Components",
+            "url": "/imagebuilder/home#/components",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "imagerecipes",
+            "name": "Image recipes",
+            "url": "/imagebuilder/home#/imageRecipes",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "containerrecipes",
+            "name": "Container recipes",
+            "url": "/imagebuilder/home#/containerRecipes",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "infrastructureconfiguration",
+            "name": "Infrastructure configuration",
+            "url": "/imagebuilder/home#/infraConfigurations",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "distributionsettings",
+            "name": "Distribution settings",
+            "url": "/imagebuilder/home#/distributionSettings",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "id": "status",
+    "name": "Status",
+    "url": "https://status.aws.amazon.com/",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Get a personalized view of AWS service health",
+    "search_terms": [],
+    "sub_services": []
+}

@@ -1,0 +1,11 @@
+{
+    "id": "cloudshell",
+    "name": "CloudShell",
+    "url": "/cloudshell#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Browser-based shell",
+    "search_terms": [],
+    "sub_services": []
+}

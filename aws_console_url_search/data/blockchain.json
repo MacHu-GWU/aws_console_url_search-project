@@ -1,0 +1,28 @@
+{
+    "id": "blockchain",
+    "name": "Blockchain",
+    "url": "/managedblockchain/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Easily create and manage scalable blockchain networks",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "networks",
+            "name": "Networks",
+            "url": "/managedblockchain/home#networks",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "invitations",
+            "name": "Invitations",
+            "url": "/managedblockchain/home#invitations",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "id": "glacier",
+    "name": "S3 Glacier",
+    "url": "/glacier/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Archive Storage in the Cloud",
+    "search_terms": [],
+    "sub_services": []
+}

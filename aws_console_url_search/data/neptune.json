@@ -1,0 +1,92 @@
+{
+    "id": "neptune",
+    "name": "Neptune",
+    "url": "/neptune/home#databases:",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Fast, reliable graph database built for the cloud",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "databases",
+            "name": "Databases",
+            "url": "/neptune/home#databases:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "clusters",
+            "name": "Clusters",
+            "url": "/neptune/home#dbclusters:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "snapshots",
+            "name": "Snapshots",
+            "url": "/neptune/home#db-snapshots:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "reservedinstances",
+            "name": "Reserved instances",
+            "url": "/neptune/home#reserved-instance-list:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "notebooks",
+            "name": "Notebooks",
+            "url": "/neptune/home#notebooks:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "subnetgroups",
+            "name": "Subnet groups",
+            "url": "/neptune/home#db-subnet-groups:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "parametergroups",
+            "name": "Parameter groups",
+            "url": "/neptune/home#parameter-groups:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "events",
+            "name": "Events",
+            "url": "/neptune/home#events:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "eventsubscriptions",
+            "name": "Event subscriptions",
+            "url": "/neptune/home#event-subscriptions-list:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "notifications",
+            "name": "Notifications",
+            "url": "/neptune/home#notifications:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

@@ -1,0 +1,140 @@
+{
+    "id": "billing",
+    "name": "Billing",
+    "url": "/billing/home",
+    "regional": false,
+    "weight": 1,
+    "short_name": null,
+    "description": "Access, analyze, and control your AWS costs and usage",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "dashboard",
+            "name": "Dashboard",
+            "url": "/billing/home#/",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "bills",
+            "name": "Bills",
+            "url": "/billing/home#/bills",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "payments",
+            "name": "Payments",
+            "url": "/billing/home#/paymentsoverview",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "credits",
+            "name": "Credits",
+            "url": "/billing/home#/credits",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "purchaseorders",
+            "name": "Purchase orders",
+            "url": "/billing/home#/purchaseorders",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "reports",
+            "name": "Cost & Usage Reports",
+            "url": "/billing/home#/reports",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "costcategories",
+            "name": "Cost Categories",
+            "url": "/billing/home#/costcategories",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "tags",
+            "name": "Cost allocation tags",
+            "url": "/billing/home#/tags",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "costexplorer",
+            "name": "Cost Explorer",
+            "url": "/billing/home#/costexplorer",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "budgets",
+            "name": "Budgets",
+            "url": "/billing/home#/budgets",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "budgetsreports",
+            "name": "Budgets Reports",
+            "url": "/billing/home#/budgets/reports",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "savingsplans",
+            "name": "Savings Plans",
+            "url": "/cost-reports/home#/savings-plans/overview",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "preferences",
+            "name": "Billing preferences",
+            "url": "/billing/home#/preferences",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "paymentmethods",
+            "name": "Payment methods",
+            "url": "/billing/home#/paymentmethods",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "consolidatedbilling",
+            "name": "Consolidated billing",
+            "url": "/organizations/home",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "taxsettings",
+            "name": "Tax settings",
+            "url": "/billing/home#/tax",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

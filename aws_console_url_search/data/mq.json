@@ -1,0 +1,28 @@
+{
+    "id": "mq",
+    "name": "MQ",
+    "url": "/amazon-mq/home#/brokers",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Managed message broker service for Apache ActiveMQ",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "brokers",
+            "name": "Brokers",
+            "url": "/amazon-mq/home#/brokers",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "configurations",
+            "name": "Configurations",
+            "url": "/amazon-mq/home#/configurations",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

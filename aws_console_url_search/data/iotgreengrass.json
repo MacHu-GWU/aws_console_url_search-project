@@ -1,0 +1,11 @@
+{
+    "id": "iotgreengrass",
+    "name": "IoT Greengrass",
+    "url": "/iotgreengrass/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Deploy and run code on your devices",
+    "search_terms": [],
+    "sub_services": []
+}

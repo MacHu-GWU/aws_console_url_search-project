@@ -1,0 +1,11 @@
+{
+    "id": "lex",
+    "name": "Lex",
+    "url": "/lexv2/home#bots",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Build Voice and Text Chatbots",
+    "search_terms": [],
+    "sub_services": []
+}

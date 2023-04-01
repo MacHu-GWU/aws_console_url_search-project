@@ -1,0 +1,11 @@
+{
+    "id": "organizations",
+    "name": "Organizations",
+    "url": "/organizations/v2/home/invitations",
+    "regional": false,
+    "weight": 1,
+    "short_name": null,
+    "description": "Policy-based management for multiple AWS accounts.",
+    "search_terms": [],
+    "sub_services": []
+}

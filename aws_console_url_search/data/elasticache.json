@@ -1,0 +1,116 @@
+{
+    "id": "elasticache",
+    "name": "ElastiCache",
+    "url": "/elasticache/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "In-Memory Cache",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "dashboard",
+            "name": "Dashboard",
+            "url": "/elasticache/home#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "memcached",
+            "name": "Memcached",
+            "url": "/elasticache/home#memcached:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "redis",
+            "name": "Redis",
+            "url": "/elasticache/home#redis:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "globalcluster",
+            "name": "Global Datastore",
+            "url": "/elasticache/home#global-cluster:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "serviceupdates",
+            "name": "Service Updates",
+            "url": "/elasticache/home#service-updates:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "reservedcachenodes",
+            "name": "Reserved Cache Nodes",
+            "url": "/elasticache/home#reserved-cache-nodes:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "snapshots",
+            "name": "Backups",
+            "url": "/elasticache/home#snapshots:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "parametergroups",
+            "name": "Parameter Groups",
+            "url": "/elasticache/home#param-groups:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "users",
+            "name": "User Management",
+            "url": "/elasticache/home#users:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "usergroups",
+            "name": "User Group Management",
+            "url": "/elasticache/home#user-groups:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "subnetgroups",
+            "name": "Subnet Groups",
+            "url": "/elasticache/home#cache-subnet-groups:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "events",
+            "name": "Events",
+            "url": "/elasticache/home#events:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "clientdownload",
+            "name": "ElastiCache Cluster Client",
+            "url": "/elasticache/home#client-download:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

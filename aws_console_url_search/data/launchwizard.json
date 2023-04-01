@@ -1,0 +1,36 @@
+{
+    "id": "launchwizard",
+    "name": "Launch Wizard",
+    "url": "/launchwizard/home#SqlDeployment",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Size, configure, and deploy third-party applications on AWS",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "mssqlserver",
+            "name": "MS SQL Server",
+            "url": "/launchwizard/home#SqlDeployment",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "sap",
+            "name": "SAP",
+            "url": "/launchwizard/home#SapDeployment",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "activedirectory",
+            "name": "Active Directory",
+            "url": "/launchwizard/home#AdDeployment",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

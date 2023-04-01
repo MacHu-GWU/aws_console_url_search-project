@@ -1,0 +1,11 @@
+{
+    "id": "support",
+    "name": "Support",
+    "url": "/support/home",
+    "regional": false,
+    "weight": 1,
+    "short_name": null,
+    "description": "Support the success and operational health of your AWS solutions",
+    "search_terms": [],
+    "sub_services": []
+}

@@ -1,0 +1,44 @@
+{
+    "id": "cloudtrail",
+    "name": "CloudTrail",
+    "url": "/cloudtrail/home#/dashboard",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Track User Activity and API Usage",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "dashboard",
+            "name": "Dashboard",
+            "url": "/cloudtrail/home#/dashboard",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "eventhistory",
+            "name": "Event history",
+            "url": "/cloudtrail/home#/events",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "insights",
+            "name": "Insights",
+            "url": "/cloudtrail/home#/insights",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "trails",
+            "name": "Trails",
+            "url": "/cloudtrail/home#/trails",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

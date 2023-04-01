@@ -1,0 +1,11 @@
+{
+    "id": "mediastore",
+    "name": "MediaStore",
+    "url": "/mediastore/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Store and deliver video assets for live or on-demand media workflows",
+    "search_terms": [],
+    "sub_services": []
+}

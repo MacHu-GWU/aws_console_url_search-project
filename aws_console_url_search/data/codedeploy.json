@@ -1,0 +1,44 @@
+{
+    "id": "codedeploy",
+    "name": "CodeDeploy",
+    "url": "/codesuite/codedeploy/deployments#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Automate Code Deployments",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "deployments",
+            "name": "Deployments",
+            "url": "/codesuite/codedeploy/deployments#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "applications",
+            "name": "Applications",
+            "url": "/codesuite/codedeploy/applications#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "deploymentconfigurations",
+            "name": "Deployment configurations",
+            "url": "/codesuite/codedeploy/deployment-configs#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "onpremisesinstances",
+            "name": "On-premises instances",
+            "url": "/codesuite/codedeploy/on-premises-instances#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

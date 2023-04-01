@@ -1,0 +1,52 @@
+{
+    "id": "codebuild",
+    "name": "CodeBuild",
+    "url": "/codesuite/codebuild/projects#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Build and Test Code",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "projects",
+            "name": "Build projects",
+            "url": "/codesuite/codebuild/projects#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "buildhistory",
+            "name": "Build history",
+            "url": "/codesuite/codebuild/builds/build-history#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "reportgroups",
+            "name": "Report groups",
+            "url": "/codesuite/codebuild/testReports/reportGroups#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "reporthistory",
+            "name": "Report history",
+            "url": "/codesuite/codebuild/testReports/reports#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "accountmetrics",
+            "name": "Account metrics",
+            "url": "/codesuite/codebuild/metrics#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "id": "eks",
+    "name": "Elastic Kubernetes Service",
+    "url": "/eks/home#/clusters",
+    "regional": true,
+    "weight": 1,
+    "short_name": "EKS",
+    "description": "Managed Kubernetes on AWS",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "clusters",
+            "name": "Clusters",
+            "url": "/eks/home#/clusters",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "id": "waf",
+    "name": "Web Application Firewall & Shield",
+    "url": "/wafv2/homev2/web-acls",
+    "regional": false,
+    "weight": 1,
+    "short_name": "WAF",
+    "description": "Protects Against DDoS Attacks and Malicious Web Traffic",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "webacls",
+            "name": "Web ACLs",
+            "url": "/wafv2/homev2/web-acls",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "ipsets",
+            "name": "IP sets",
+            "url": "/wafv2/homev2/ip-sets",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "regexpatternsets",
+            "name": "Regex pattern sets",
+            "url": "/wafv2/homev2/regex-pattern-sets",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "rulegroups",
+            "name": "Rule groups",
+            "url": "/wafv2/homev2/rule-groups",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "marketplace",
+            "name": "AWS Marketplace",
+            "url": "/wafv2/homev2/marketplace",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

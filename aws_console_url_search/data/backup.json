@@ -1,0 +1,76 @@
+{
+    "id": "backup",
+    "name": "Backup",
+    "url": "/backup/home#/dashboard",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "centrally manage and automate backups across AWS services",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "dashboard",
+            "name": "Dashboard",
+            "url": "/backup/home#/dashboard",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "backupvaults",
+            "name": "Backup vaults",
+            "url": "/backup/home#/backupvaults",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "backupplans",
+            "name": "Backup plans",
+            "url": "/backup/home#/backupplan",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "protectedresources",
+            "name": "Protected resources",
+            "url": "/backup/home#/resources",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "jobs",
+            "name": "Jobs",
+            "url": "/backup/home#/jobs/backup",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "settings",
+            "name": "Settings",
+            "url": "/backup/home#/settings",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "crossaccountmonitoring",
+            "name": "Cross-account monitoring",
+            "url": "/backup/home#/organization/monitoring/backup",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "backuppolicies",
+            "name": "Backup policies",
+            "url": "/backup/home#/organization/policies",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

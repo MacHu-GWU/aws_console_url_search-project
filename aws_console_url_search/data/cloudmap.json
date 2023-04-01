@@ -1,0 +1,20 @@
+{
+    "id": "cloudmap",
+    "name": "Cloud Map",
+    "url": "/cloudmap/home#namespaces",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Build a dynamic map of your cloud",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "namespaces",
+            "name": "Namespaces",
+            "url": "/cloudmap/home#namespaces",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

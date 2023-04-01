@@ -1,0 +1,44 @@
+{
+    "id": "mcs",
+    "name": "Keyspaces (for Apache Cassandra)",
+    "url": "/keyspaces/home#dashboard",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "A scalable, highly available, and managed Apache Cassandra\u2013compatible database service",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "dashboard",
+            "name": "Dashboard",
+            "url": "/keyspaces/home#dashboard",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "keyspaces",
+            "name": "Keyspaces",
+            "url": "/keyspaces/home#keyspaces",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "tables",
+            "name": "Tables",
+            "url": "/keyspaces/home#tables",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "cqleditor",
+            "name": "CQL editor",
+            "url": "/keyspaces/home#cql-editor",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

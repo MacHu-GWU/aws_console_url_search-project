@@ -1,0 +1,292 @@
+{
+    "id": "vpc",
+    "name": "Virtual Private Cloud",
+    "url": "/vpc/home#dashboard:",
+    "regional": true,
+    "weight": 970,
+    "short_name": null,
+    "description": "Isolated Cloud Resources",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "dashboard",
+            "name": "Dashboard",
+            "url": "/vpc/home#dashboard:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "vpcs",
+            "name": "Your VPCs",
+            "url": "/vpc/home#vpcs:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "subnets",
+            "name": "Subnets",
+            "url": "/vpc/home#subnets:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "routetables",
+            "name": "Route Tables",
+            "url": "/vpc/home#RouteTables:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "internetgateways",
+            "name": "Internet Gateways",
+            "url": "/vpc/home#igws:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "egressonlyinternetgateways",
+            "name": "Egress Only Internet Gateways",
+            "url": "/vpc/home#EgressOnlyInternetGateways:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "carrier gateways",
+            "name": "Carrier Gateways",
+            "url": "/vpc/home#CarrierGateways:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "dhcpoptions",
+            "name": "DHCP Options Sets",
+            "url": "/vpc/home#dhcpOptions:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "elasticips",
+            "name": "Elastic IPs",
+            "url": "/vpc/home#Addresses:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "managedprefixlists",
+            "name": "Managed Prefix Lists",
+            "url": "/vpc/home#ManagedPrefixLists:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "endpoints",
+            "name": "Endpoints",
+            "url": "/vpc/home#Endpoints:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "endpointservices",
+            "name": "Endpoint Services",
+            "url": "/vpc/home#EndpointServices:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "natgateways",
+            "name": "NAT Gateways",
+            "url": "/vpc/home#NatGateways:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "peeringconnections",
+            "name": "Peering Connections",
+            "url": "/vpc/home#PeeringConnections:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "networkacls",
+            "name": "Network ACLs",
+            "url": "/vpc/home#acls:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "securitygroups",
+            "name": "Security Groups",
+            "url": "/vpc/home#SecurityGroups:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "reachabilityanalyzer",
+            "name": "Reachability Analyzer",
+            "url": "/vpc/home#ReachabilityAnalyzer:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "rulegroups",
+            "name": "Rule Groups",
+            "url": "/vpc/home#DNSFirewallRuleGroups:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "domainlists",
+            "name": "Domain Lists",
+            "url": "/vpc/home#DNSFirewallDomainLists:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "firewalls",
+            "name": "Firewalls",
+            "url": "/vpc/home#NetworkFirewalls:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "firewallpolicies",
+            "name": "Firewall policies",
+            "url": "/vpc/home#NetworkFirewallPolicies:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "networkfirewallrulegroups",
+            "name": "Network Firewall rule groups",
+            "url": "/vpc/home#NetworkFirewallRuleGroups:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "customergateways",
+            "name": "Customer Gateways",
+            "url": "/vpc/home#CustomerGateways:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "virtualprivategateways",
+            "name": "Virtual Private Gateways",
+            "url": "/vpc/home#VpnGateways:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "vpnconnections",
+            "name": "Site-to-Site VPN Connections",
+            "url": "/vpc/home#VpnConnections:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "clientvpnendpoints",
+            "name": "Client VPN Endpoints",
+            "url": "/vpc/home#ClientVPNEndpoints:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "transitgateways",
+            "name": "Transit Gateways",
+            "url": "/vpc/home#TransitGateways:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "transitgatewayattachments",
+            "name": "Transit Gateway Attachments",
+            "url": "/vpc/home#TransitGatewayAttachments:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "transitgatewayroutetables",
+            "name": "Transit Gateway Route Tables",
+            "url": "/vpc/home#TransitGatewayRouteTables:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "transitgatewaymulticast",
+            "name": "Transit Gateway Multicast",
+            "url": "/vpc/home#TransitGatewayMulticastDomains:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "networkmanager",
+            "name": "Network Manager",
+            "url": "/vpc/home#networkmanager:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "mirrorsessions",
+            "name": "Mirror Sessions",
+            "url": "/vpc/home#TrafficMirrorSessions:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "mirrortargets",
+            "name": "Mirror Targets",
+            "url": "/vpc/home#TrafficMirrorTargets:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "mirrorfilters",
+            "name": "Mirror Filters",
+            "url": "/vpc/home#TrafficMirrorFilters:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "settings",
+            "name": "Settings",
+            "url": "/vpc/home#Settings:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

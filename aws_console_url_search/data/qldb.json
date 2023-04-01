@@ -1,0 +1,52 @@
+{
+    "id": "qldb",
+    "name": "QLDB",
+    "url": "/qldb/home#ledger-list",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Fully managed ledger database",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "ledgers",
+            "name": "Ledgers",
+            "url": "/qldb/home#ledger-list",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "queryeditor",
+            "name": "Query editor",
+            "url": "/qldb/home#query-editor",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "streams",
+            "name": "Streams",
+            "url": "/qldb/home#stream-list",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "export",
+            "name": "Export",
+            "url": "/qldb/home#export-job-list",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "verification",
+            "name": "Verification",
+            "url": "/qldb/home#verification",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

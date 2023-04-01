@@ -1,0 +1,36 @@
+{
+    "id": "marketplace",
+    "name": "Marketplace Subscriptions",
+    "url": "/marketplace/home#/subscriptions",
+    "regional": false,
+    "weight": 1,
+    "short_name": null,
+    "description": "Digital catalog where you can find, buy, and deploy software",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "subscriptions",
+            "name": "Manage subscriptions",
+            "url": "/marketplace/home#/subscriptions",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "discoverproducts",
+            "name": "Discover products",
+            "url": "/marketplace/home#/search",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "settings",
+            "name": "Settings",
+            "url": "/marketplace/home#/settings",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

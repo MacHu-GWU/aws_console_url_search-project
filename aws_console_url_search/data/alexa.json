@@ -1,0 +1,11 @@
+{
+    "id": "alexa",
+    "name": "Alexa for Business",
+    "url": "/a4b/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Empower your organization with voice",
+    "search_terms": [],
+    "sub_services": []
+}

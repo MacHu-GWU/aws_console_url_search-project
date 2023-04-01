@@ -1,0 +1,11 @@
+{
+    "id": "quicksight",
+    "name": "QuickSight",
+    "url": "https://quicksight.aws.amazon.com/",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Fast, easy to use business analytics",
+    "search_terms": [],
+    "sub_services": []
+}

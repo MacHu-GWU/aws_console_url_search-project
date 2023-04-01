@@ -1,0 +1,20 @@
+{
+    "id": "codepipeline",
+    "name": "CodePipeline",
+    "url": "/codesuite/codepipeline/pipelines#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Release Software using Continuous Delivery",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "pipelines",
+            "name": "Pipelines",
+            "url": "/codesuite/codepipeline/pipelines#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

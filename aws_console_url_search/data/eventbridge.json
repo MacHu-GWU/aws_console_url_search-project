@@ -1,0 +1,92 @@
+{
+    "id": "eventbridge",
+    "name": "EventBridge",
+    "url": "/events/home#/events",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Serverless event bus that connects application data from your own apps, SaaS, and AWS services",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "events",
+            "name": "Events",
+            "url": "/events/home#/events",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "eventbuses",
+            "name": "Event buses",
+            "url": "/events/home#/eventbuses",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "rules",
+            "name": "Rules",
+            "url": "/events/home#/rules",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "archives",
+            "name": "Archives",
+            "url": "/events/home#/archives",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "replays",
+            "name": "Replays",
+            "url": "/events/home#/replays",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "integration",
+            "name": "Integration",
+            "url": "/events/home#/integration",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "partnereventsources",
+            "name": "Partner event sources",
+            "url": "/events/home#/partners",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "apidestinations",
+            "name": "API destinations",
+            "url": "/events/home#/apidestinations",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "schemaregistry",
+            "name": "Schema registry",
+            "url": "/events/home#/schemaregistry",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "schemas",
+            "name": "Schemas",
+            "url": "/events/home#/schemas",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "id": "iotanalytics",
+    "name": "IoT Analytics",
+    "url": "/iotanalytics/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Collect, preprocess, store, analyze and visualize data of IoT devices",
+    "search_terms": [],
+    "sub_services": []
+}

@@ -1,0 +1,60 @@
+{
+    "id": "batch",
+    "name": "Batch",
+    "url": "/batch/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Run Batch Jobs at Any Scale",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "dashboard",
+            "name": "Dashboard",
+            "url": "/batch/home#dashboard",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "jobs",
+            "name": "Jobs",
+            "url": "/batch/home#jobs",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "jobdefinitions",
+            "name": "Job definitions",
+            "url": "/batch/home#job-definition",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "jobqueues",
+            "name": "Job queues",
+            "url": "/batch/home#queues",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "computeenvironments",
+            "name": "Compute environments",
+            "url": "/batch/home#compute-environments",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "wizard",
+            "name": "Wizard",
+            "url": "/batch/home#wizard",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

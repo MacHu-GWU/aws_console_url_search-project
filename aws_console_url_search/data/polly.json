@@ -1,0 +1,36 @@
+{
+    "id": "polly",
+    "name": "Polly",
+    "url": "/polly/home/SynthesizeSpeech#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Turn Text into Lifelike Speech",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "texttospeech",
+            "name": "Text-to-Speech",
+            "url": "/polly/home/SynthesizeSpeech#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "lexicons",
+            "name": "Lexicons",
+            "url": "/polly/home/Lexicons#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "s3synthesistasks",
+            "name": "S3 synthesis tasks",
+            "url": "/polly/home/SynthesisTasks#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "id": "iam",
+    "name": "Identity and Access Management",
+    "url": "/iam/home#/home",
+    "regional": false,
+    "weight": 1000,
+    "short_name": "IAM",
+    "description": "Manage User Access and Encryption Keys",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "dashboard",
+            "name": "Dashboard",
+            "url": "/iam/home#/home",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "usergroups",
+            "name": "User groups",
+            "url": "/iamv2/home#/groups",
+            "weight": 40,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "users",
+            "name": "Users",
+            "url": "/iamv2/home#/users",
+            "weight": 50,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "roles",
+            "name": "Roles",
+            "url": "/iamv2/home#/roles",
+            "weight": 70,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "policies",
+            "name": "Policies",
+            "url": "/iamv2/home#/policies",
+            "weight": 60,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "identityproviders",
+            "name": "Identity providers",
+            "url": "/iamv2/home#/identity_providers",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "accountsettings",
+            "name": "Account settings",
+            "url": "/iam/home#/account_settings",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "credentialreport",
+            "name": "Credential report",
+            "url": "/iam/home#/credential_report",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "organizationactivity",
+            "name": "Organization activity",
+            "url": "/iam/home#/organizations/ServiceActivity",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "scps",
+            "name": "Service control policies (SCPs)",
+            "url": "/iam/home#/organizations/ServiceControlPolicies",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

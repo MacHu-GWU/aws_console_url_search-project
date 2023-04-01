@@ -1,0 +1,116 @@
+{
+    "id": "robomaker",
+    "name": "RoboMaker",
+    "url": "/robomaker/home#ides",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Develop, test, and deploy intelligent robotics applications",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "developmentenvironments",
+            "name": "Development environments",
+            "url": "/robomaker/home#ides",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "robotapplications",
+            "name": "Robot applications",
+            "url": "/robomaker/home#robotApplications",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "simulationapplications",
+            "name": "Simulation applications",
+            "url": "/robomaker/home#simulationApplications",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "worldtemplates",
+            "name": "World templates",
+            "url": "/robomaker/home#worldTemplates",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "worlds",
+            "name": "Worlds",
+            "url": "/robomaker/home#worlds",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "generationjobs",
+            "name": "Generation jobs",
+            "url": "/robomaker/home#worldGenerationJobs",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "exportjobs",
+            "name": "Export jobs",
+            "url": "/robomaker/home#worldExportJobs",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "simulationjobs",
+            "name": "Simulation jobs",
+            "url": "/robomaker/home#simulationJobs",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "simulationjobbatches",
+            "name": "Simulation job batches",
+            "url": "/robomaker/home#simulationJobBatches",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "robots",
+            "name": "Robots",
+            "url": "/robomaker/home#robots",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "fleets",
+            "name": "Fleets",
+            "url": "/robomaker/home#fleets",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "deployments",
+            "name": "Deployments",
+            "url": "/robomaker/home#deployments",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "sampleapplications",
+            "name": "Sample applications",
+            "url": "/robomaker/home#sampleSimulationJobs",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

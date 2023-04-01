@@ -1,0 +1,44 @@
+{
+    "id": "directoryservice",
+    "name": "Directory Service",
+    "url": "/directoryservicev2/identity#!/directories",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Host and Manage Active Directory",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "activedirectories",
+            "name": "Active Directories",
+            "url": "/directoryservicev2/identity#!/directories",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "directoriessharedwithme",
+            "name": "Active Directories shared with me",
+            "url": "/directoryservicev2/home#!/directories-shared-with-me",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "clouddirectories",
+            "name": "Cloud Directories",
+            "url": "/directoryservicev2/home#!/cloud-directories",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "cloudschemas",
+            "name": "Cloud Schemas",
+            "url": "/directoryservicev2/home#!/cloud-schemas",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "id": "ses",
+    "name": "Simple Email Service",
+    "url": "/ses/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": "SES",
+    "description": "Email Sending and Receiving Service",
+    "search_terms": [],
+    "sub_services": []
+}

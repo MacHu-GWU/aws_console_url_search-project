@@ -1,0 +1,52 @@
+{
+    "id": "opsworks",
+    "name": "OpsWorks",
+    "url": "/opsworks/home#/dashboard",
+    "regional": false,
+    "weight": 1,
+    "short_name": null,
+    "description": "Configuration Management with Chef and Puppet",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "stacks",
+            "name": "Stacks",
+            "url": "/opsworks/home#/dashboard",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "users",
+            "name": "Users",
+            "url": "/opsworks/home#/users",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "settings",
+            "name": "Settings",
+            "url": "/opsworks/home#/mysettings",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "chef",
+            "name": "Chef Automate servers",
+            "url": "/opsworks/cm/home?owc=chefautomate#/chef/",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "puppet",
+            "name": "Puppet Enterprise servers",
+            "url": "/opsworks/cm/home?owc=puppet#/puppet/",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

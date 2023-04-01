@@ -1,0 +1,36 @@
+{
+    "id": "ecr",
+    "name": "Elastic Container Registry",
+    "url": "/ecr/repositories#",
+    "regional": true,
+    "weight": 1,
+    "short_name": "ECR",
+    "description": "Fully-managed Docker container registry",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "repositories",
+            "name": "Repositories",
+            "url": "/ecr/repositories#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "registries",
+            "name": "Registries",
+            "url": "/ecr/registries#",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "publicgallery",
+            "name": "Public gallery",
+            "url": "https://gallery.ecr.aws/",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

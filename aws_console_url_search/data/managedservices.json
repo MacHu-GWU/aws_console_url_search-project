@@ -1,0 +1,11 @@
+{
+    "id": "managedservices",
+    "name": "Managed Services",
+    "url": "/managedservices/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "IT operations management for AWS",
+    "search_terms": [],
+    "sub_services": []
+}

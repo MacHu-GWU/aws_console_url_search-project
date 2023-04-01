@@ -1,0 +1,11 @@
+{
+    "id": "macie",
+    "name": "Macie",
+    "url": "/macie/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Amazon Macie classifies and secures your business-critical content.",
+    "search_terms": [],
+    "sub_services": []
+}

@@ -1,0 +1,52 @@
+{
+    "id": "pinpoint",
+    "name": "Pinpoint",
+    "url": "/pinpoint/home#/apps",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Engage Users via Email, SMS, Push & Analytics",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "allprojects",
+            "name": "All projects",
+            "url": "/pinpoint/home#/apps",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "messagetemplates",
+            "name": "Message templates",
+            "url": "/pinpoint/home#/templates/overview",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "machinelearningmodels",
+            "name": "Machine learning models",
+            "url": "/pinpoint/home#/recommenders",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "deliverabilitydashboard",
+            "name": "Deliverability dashboard",
+            "url": "/pinpoint/home#/deliverability/overview",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "smsandvoice",
+            "name": "SMS and voice",
+            "url": "/pinpoint/home#/sms-account-settings",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

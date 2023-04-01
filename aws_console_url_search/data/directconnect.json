@@ -1,0 +1,60 @@
+{
+    "id": "directconnect",
+    "name": "Direct Connect",
+    "url": "/directconnect/v2/home#/connections",
+    "regional": false,
+    "weight": 1,
+    "short_name": null,
+    "description": "Dedicated Network Connection to AWS",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "connections",
+            "name": "Connections",
+            "url": "/directconnect/v2/home#/connections",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "virtualinterfaces",
+            "name": "Virtual interfaces",
+            "url": "/directconnect/v2/home#/virtual-interfaces",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "lags",
+            "name": "LAGs",
+            "url": "/directconnect/v2/home#/lags",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "directconnectgateways",
+            "name": "Direct Connect gateways",
+            "url": "/directconnect/v2/home#/dxgateways",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "virtualprivategateways",
+            "name": "Virtual private gateways",
+            "url": "/directconnect/v2/home#/virtual-gateways",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "transitgateways",
+            "name": "Transit gateways",
+            "url": "/directconnect/v2/home#/transit-gateways",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

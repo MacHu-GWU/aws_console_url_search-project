@@ -1,0 +1,11 @@
+{
+    "id": "licensemanager",
+    "name": "License Manager",
+    "url": "/license-manager/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Set rules to manage, discover, and report third-party license usage proactively",
+    "search_terms": [],
+    "sub_services": []
+}

@@ -1,0 +1,36 @@
+{
+    "id": "ecs",
+    "name": "Elastic Container Service",
+    "url": "/ecs/home#/clusters",
+    "regional": true,
+    "weight": 1,
+    "short_name": "ECS",
+    "description": "Run and Manage Docker Containers",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "clusters",
+            "name": "Clusters",
+            "url": "/ecs/home#/clusters",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "taskdefinitions",
+            "name": "Task Definitions",
+            "url": "/ecs/home#/taskDefinitions",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "settings",
+            "name": "Account settings",
+            "url": "/ecs/home#/settings",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

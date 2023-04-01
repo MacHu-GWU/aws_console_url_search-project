@@ -1,0 +1,44 @@
+{
+    "id": "devicefarm",
+    "name": "Device Farm",
+    "url": "/devicefarm/home#/mobile/projects",
+    "regional": false,
+    "weight": 1,
+    "short_name": null,
+    "description": "Test Android, iOS, and Web Apps on Real Devices in the Cloud",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "mobileprojects",
+            "name": "Mobile Projects",
+            "url": "/devicefarm/home#/mobile/projects",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "mobiledeviceslots",
+            "name": "Mobile device slots",
+            "url": "/devicefarm/home#/mobile/deviceslots",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "mobileprivatedevices",
+            "name": "Mobile private devices",
+            "url": "/devicefarm/home#/mobile/privatedevices",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "browserprojects",
+            "name": "Browser projects",
+            "url": "/devicefarm/home#/browser/projects",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "id": "transfer",
+    "name": "Transfer for SFTP",
+    "url": "/transfer/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Fully-managed SFTP service for Amazon S3",
+    "search_terms": [],
+    "sub_services": []
+}

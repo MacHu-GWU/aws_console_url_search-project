@@ -1,0 +1,36 @@
+{
+    "id": "snowfamily",
+    "name": "Snow Family",
+    "url": "/snowfamily/home#/jobs",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Process data at the edge and migrate data into and out of AWS",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "jobs",
+            "name": "Jobs",
+            "url": "/snowfamily/home#/jobs",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "createjob",
+            "name": "Create job",
+            "url": "/snowfamily/home#/change-request/create",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "prepaidjobs",
+            "name": "Prepaid jobs",
+            "url": "/snowfamily/home#/prepaidjobs",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

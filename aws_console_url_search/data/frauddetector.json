@@ -1,0 +1,84 @@
+{
+    "id": "frauddetector",
+    "name": "Fraud Detector",
+    "url": "/frauddetector/home#getDetectors",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Detect more online fraud faster with machine learning",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "detectors",
+            "name": "Detectors",
+            "url": "/frauddetector/home#getDetectors",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "models",
+            "name": "Models",
+            "url": "/frauddetector/home#getModels",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "events",
+            "name": "Events",
+            "url": "/frauddetector/home#getEventTypes",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "entities",
+            "name": "Entities",
+            "url": "/frauddetector/home#entityTypes",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "outcomes",
+            "name": "Outcomes",
+            "url": "/frauddetector/home#getOutcomes",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "labels",
+            "name": "Labels",
+            "url": "/frauddetector/home#getLabels",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "variables",
+            "name": "Variables",
+            "url": "/frauddetector/home#getVariables",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "searchpastpredictions",
+            "name": "Search past predictions",
+            "url": "/frauddetector/home#auditEvaluations",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "batchpredictions",
+            "name": "Batch predictions",
+            "url": "/frauddetector/home#getBatchPredictions",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

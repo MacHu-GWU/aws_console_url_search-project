@@ -1,0 +1,76 @@
+{
+    "id": "ram",
+    "name": "Resource Access Manager",
+    "url": "/ram/home#OwnedResourceShares:",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Share AWS resources with other accounts or AWS Organizations",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "ownedresourceshares",
+            "name": "Owned resource shares",
+            "url": "/ram/home#OwnedResourceShares:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "ownedresources",
+            "name": "Owned resources",
+            "url": "/ram/home#OwnedResources:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "ownedprincipals",
+            "name": "Owned principals",
+            "url": "/ram/home#OwnedPrincipals:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "sharedresourceshares",
+            "name": "Shared resource shares",
+            "url": "/ram/home#SharedResourceShares:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "sharedresources",
+            "name": "Shared resources",
+            "url": "/ram/home#SharedResources:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "sharedprincipals",
+            "name": "Shared principals",
+            "url": "/ram/home#SharedPrincipals:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "permissionslibrary",
+            "name": "Permissions library",
+            "url": "/ram/home#Permissions:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "settings",
+            "name": "Settings",
+            "url": "/ram/home#Settings:",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

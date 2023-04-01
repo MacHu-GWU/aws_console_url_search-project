@@ -1,0 +1,11 @@
+{
+    "id": "kendra",
+    "name": "Kendra",
+    "url": "/kendra/home#indexes",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Highly accurate enterprise search powered by machine learning",
+    "search_terms": [],
+    "sub_services": []
+}

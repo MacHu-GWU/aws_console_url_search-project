@@ -1,0 +1,11 @@
+{
+    "id": "iot1click",
+    "name": "IoT 1-Click",
+    "url": "/iot1click/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Trigger AWS Lambda functions from simple devices",
+    "search_terms": [],
+    "sub_services": []
+}

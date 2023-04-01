@@ -1,0 +1,60 @@
+{
+    "id": "mediaconvert",
+    "name": "MediaConvert",
+    "url": "/mediaconvert/home#/jobs/list",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Convert file-based content for broadcast and multiscreen delivery",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "jobs",
+            "name": "Jobs",
+            "url": "/mediaconvert/home#/jobs/list",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "outputpresets",
+            "name": "Output presets",
+            "url": "/mediaconvert/home#/presets/list",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "jobtemplates",
+            "name": "Job templates",
+            "url": "/mediaconvert/home#/templates/list",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "queues",
+            "name": "Queues",
+            "url": "/mediaconvert/home#/queues/list",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "certificates",
+            "name": "Certificates",
+            "url": "/mediaconvert/home#/certificates",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "account",
+            "name": "Account",
+            "url": "/mediaconvert/home#/account",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

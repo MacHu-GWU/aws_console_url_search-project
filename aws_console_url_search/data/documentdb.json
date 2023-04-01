@@ -1,0 +1,84 @@
+{
+    "id": "documentdb",
+    "name": "DocumentDB",
+    "url": "/docdb/home#dashboard",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Fully-managed MongoDB-compatible database service",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "dashboard",
+            "name": "Dashboard",
+            "url": "/docdb/home#dashboard",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "clusters",
+            "name": "Clusters",
+            "url": "/docdb/home#clusters",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "snapshots",
+            "name": "Snapshots",
+            "url": "/docdb/home#snapshots",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "subnetgroups",
+            "name": "Subnet groups",
+            "url": "/docdb/home#subnetGroups",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "parametergroups",
+            "name": "Parameter groups",
+            "url": "/docdb/home#parameterGroups",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "eventsubscriptions",
+            "name": "Event Subscriptions",
+            "url": "/docdb/home#eventSubscriptions",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "events",
+            "name": "Events",
+            "url": "/docdb/home#events",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "what'snew",
+            "name": "What's New",
+            "url": "/docdb/home#whats-new",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "tutorials",
+            "name": "Tutorials",
+            "url": "/docdb/home#tutorials-page",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

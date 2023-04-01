@@ -1,0 +1,44 @@
+{
+    "id": "braket",
+    "name": "Braket",
+    "url": "/braket/home#/devices",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Explore and experiment with quantum computing",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "devices",
+            "name": "Devices",
+            "url": "/braket/home#/devices",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "notebooks",
+            "name": "Notebooks",
+            "url": "/braket/home#/notebooks",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "tasks",
+            "name": "Tasks",
+            "url": "/braket/home#/tasks",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "announcements",
+            "name": "Announcements",
+            "url": "/braket/home#/announcements",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

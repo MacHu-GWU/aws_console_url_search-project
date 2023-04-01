@@ -1,0 +1,11 @@
+{
+    "id": "iotdevicedefender",
+    "name": "IoT Device Defender",
+    "url": "/devicedefender/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Connect Devices to the Cloud",
+    "search_terms": [],
+    "sub_services": []
+}

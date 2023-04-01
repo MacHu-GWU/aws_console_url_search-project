@@ -1,0 +1,36 @@
+{
+    "id": "mediatailor",
+    "name": "MediaTailor",
+    "url": "/mediatailor/home#/controlpanel",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Personalize and monetize multiscreen content with server-side ad insertion",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "configurations",
+            "name": "Configurations",
+            "url": "/mediatailor/home#/controlpanel",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "sourcelocations",
+            "name": "Source locations",
+            "url": "/mediatailor/home#/source-locations",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "channels",
+            "name": "Channels",
+            "url": "/mediatailor/home#/channels",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "id": "cloudsearch",
+    "name": "CloudSearch",
+    "url": "/cloudsearch/home#",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Managed Search Service",
+    "search_terms": [],
+    "sub_services": []
+}

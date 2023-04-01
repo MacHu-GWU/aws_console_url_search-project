@@ -1,0 +1,11 @@
+{
+    "id": "amplify",
+    "name": "Amplify",
+    "url": "/amplify/home#/home",
+    "regional": true,
+    "weight": 1,
+    "short_name": null,
+    "description": "Develop & deploy cloud-powered mobile and web apps",
+    "search_terms": [],
+    "sub_services": []
+}

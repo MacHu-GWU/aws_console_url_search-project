@@ -1,0 +1,28 @@
+{
+    "id": "acm",
+    "name": "Certificate Manager",
+    "url": "/acm/home#/",
+    "regional": true,
+    "weight": 1,
+    "short_name": "ACM",
+    "description": "Provision, Manage, and Deploy SSL/TLS Certificates",
+    "search_terms": [],
+    "sub_services": [
+        {
+            "id": "certificatemanager",
+            "name": "Certificate manager",
+            "url": "/acm/home#/",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        },
+        {
+            "id": "privatecas",
+            "name": "Private certificate authorities",
+            "url": "/acm-pca/home#/",
+            "weight": 1,
+            "short_name": null,
+            "search_terms": []
+        }
+    ]
+}
