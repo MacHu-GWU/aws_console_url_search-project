@@ -122,15 +122,15 @@
         },
         {
             "id": "volumes",
-            "name": "Volume",
+            "name": "Elastic Block Storage (EBS) Volumes",
             "url": "/ec2/home#Volumes:",
             "weight": 55,
-            "short_name": "ebs",
+            "short_name": null,
             "search_terms": []
         },
         {
             "id": "snapshots",
-            "name": "Snapshots",
+            "name": "Elastic Block Storage (EBS) Snapshots",
             "url": "/ec2/home#Snapshots:",
             "weight": 50,
             "short_name": null,
@@ -138,7 +138,7 @@
         },
         {
             "id": "lifecyclemanager",
-            "name": "Lifecycle Manager",
+            "name": "Elastic Block Storage (EBS) Lifecycle Manager",
             "url": "/ec2/home#Lifecycle:",
             "weight": 1,
             "short_name": null,
@@ -148,7 +148,7 @@
             "id": "securitygroups",
             "name": "Security Groups",
             "url": "/ec2/v2/home#SecurityGroups:",
-            "weight": 75,
+            "weight": 65,
             "short_name": "sg",
             "search_terms": []
         },
