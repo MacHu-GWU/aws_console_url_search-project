@@ -3,7 +3,7 @@
     "name": "CloudWatch",
     "url": "/cloudwatch/home#",
     "regional": true,
-    "weight": 1,
+    "weight": 810,
     "short_name": null,
     "description": "Monitor Resources and Applications",
     "search_terms": [],

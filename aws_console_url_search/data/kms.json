@@ -3,7 +3,7 @@
     "name": "Key Management Service",
     "url": "/kms/home#/kms/defaultKeys",
     "regional": true,
-    "weight": 1,
+    "weight": 880,
     "short_name": "KMS",
     "description": "Securely Generate and Manage AWS Encryption Keys",
     "search_terms": [],

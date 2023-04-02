@@ -3,7 +3,7 @@
     "name": "Redshift",
     "url": "/redshiftv2/home#dashboard",
     "regional": true,
-    "weight": 1,
+    "weight": 820,
     "short_name": null,
     "description": "Fast, Simple, Cost-Effective Data Warehousing",
     "search_terms": [],

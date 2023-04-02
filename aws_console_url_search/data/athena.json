@@ -3,7 +3,7 @@
     "name": "Athena",
     "url": "/athena/home#",
     "regional": true,
-    "weight": 1,
+    "weight": 890,
     "short_name": null,
     "description": "Query Data in S3 using SQL",
     "search_terms": [],

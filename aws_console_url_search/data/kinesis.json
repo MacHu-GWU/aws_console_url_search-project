@@ -3,7 +3,7 @@
     "name": "Kinesis",
     "url": "/kinesis/home#dashboard",
     "regional": true,
-    "weight": 1,
+    "weight": 830,
     "short_name": null,
     "description": "Work with Real-Time Streaming Data",
     "search_terms": [],

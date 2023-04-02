@@ -3,7 +3,7 @@
     "name": "Elastic Container Registry",
     "url": "/ecr/repositories#",
     "regional": true,
-    "weight": 1,
+    "weight": 850,
     "short_name": "ECR",
     "description": "Fully-managed Docker container registry",
     "search_terms": [],

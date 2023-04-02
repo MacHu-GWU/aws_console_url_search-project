@@ -3,7 +3,7 @@
     "name": "Elastic Container Service",
     "url": "/ecs/home#/clusters",
     "regional": true,
-    "weight": 1,
+    "weight": 840,
     "short_name": "ECS",
     "description": "Run and Manage Docker Containers",
     "search_terms": [],
