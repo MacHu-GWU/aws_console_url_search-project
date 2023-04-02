@@ -1,28 +1,23 @@
 # -*- coding: utf-8 -*-
 
 """
-A wrapper around the whoosh index object.
+This module provides a base class for each whoosh search index.
 """
 
-import typing as T
 import dataclasses
 from pathlib_mate import Path
 from whoosh import fields
 from whoosh.index import open_dir, create_in, FileIndex
 from ..cache import dir_cache
 
+
 @dataclasses.dataclass
 class SearchIndex:
     """
-    Abstract class for whoosh search index.
+    Base class for whoosh search index. It has to implement the following methods:
 
-    ::
-
-        def build_index():
-            ...
-
-        def search():
-            ...
+    - ``build_index()``:
+    - ``search()``:
     """
     schema: fields.SchemaClass = dataclasses.field()
     dir_index: Path = dataclasses.field()

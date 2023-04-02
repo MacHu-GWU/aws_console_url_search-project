@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 
-"""
-A wrapper around the whoosh index object.
-"""
-
 import typing as T
+import os
 import dataclasses
 from pathlib_mate import Path
 from whoosh import fields, qparser, query, sorting
@@ -12,6 +9,7 @@ from whoosh import fields, qparser, query, sorting
 from ..model import BaseModel, MainService, load_data
 from ..paths import dir_main_service_index
 from ..cache import cache
+from ..constants import CACHE_EXPIRE
 from .base import SearchIndex
 
 
@@ -92,16 +90,16 @@ class MainServiceIndex(SearchIndex):
     def _build_index(
         self,
         main_services: T.Optional[T.List[MainService]] = None,
+        multi_thread: bool = False,
     ):
-        """
-        Build Whoosh Index, add document.
-        """
         if main_services is None:
             main_services = load_data()
 
         idx = self.get_index()
-        writer = idx.writer()
-        # writer = index.writer(procs=os.cpu_count()) # multi thread mode
+        if multi_thread:  # pragma: no cover
+            writer = idx.writer(procs=os.cpu_count())
+        else:
+            writer = idx.writer()
 
         for main_service in main_services:
             document = {
@@ -124,14 +122,17 @@ class MainServiceIndex(SearchIndex):
     def build_index(
         self,
         main_services: T.Optional[T.List[MainService]] = None,
+        multi_thread: bool = False,
         rebuild: bool = False,
     ):
-        if rebuild:
+        if rebuild:  # pragma: no cover
             self.dir_index.remove_if_exists()
         self._build_index(
             main_services=main_services,
+            multi_thread=multi_thread,
         )
 
+    @cache.memoize(expire=CACHE_EXPIRE)
     def get_by_id(self, id: str) -> T.Optional[MainServiceDocument]:
         q = query.Term("id_kw", id)
         idx = self.get_index()
@@ -142,7 +143,7 @@ class MainServiceIndex(SearchIndex):
         except IndexError:
             return None
 
-    @cache.memoize(expire=3)
+    @cache.memoize(expire=CACHE_EXPIRE)
     def top_k(self, k: int = 20) -> T.List[MainServiceDocument]:
         q = query.Or([query.Term("regional", True), query.Term("regional", False)])
         idx = self.get_index()
@@ -155,7 +156,7 @@ class MainServiceIndex(SearchIndex):
                 doc_list.append(MainServiceDocument.from_dict(hit.fields()))
         return doc_list
 
-    @cache.memoize(expire=3600)
+    @cache.memoize(expire=CACHE_EXPIRE)
     def search(
         self,
         query_str: str,
