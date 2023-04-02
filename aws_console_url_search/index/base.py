@@ -9,7 +9,7 @@ import dataclasses
 from pathlib_mate import Path
 from whoosh import fields
 from whoosh.index import open_dir, create_in, FileIndex
-
+from ..cache import dir_cache
 
 @dataclasses.dataclass
 class SearchIndex:
@@ -38,3 +38,5 @@ class SearchIndex:
             idx = create_in(dirname=self.dir_index.abspath, schema=self.schema)
         return idx
 
+    def clear_cache(self):
+        dir_cache.remove_if_exists()

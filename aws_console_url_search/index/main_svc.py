@@ -11,6 +11,7 @@ from whoosh import fields, qparser, query, sorting
 
 from ..model import BaseModel, MainService, load_data
 from ..paths import dir_main_service_index
+from ..cache import cache
 from .base import SearchIndex
 
 
@@ -87,8 +88,8 @@ class MainServiceIndex(SearchIndex):
         if main_services is None:
             main_services = load_data()
 
-        index = self.get_index()
-        writer = index.writer()
+        idx = self.get_index()
+        writer = idx.writer()
         # writer = index.writer(procs=os.cpu_count()) # multi thread mode
 
         for main_service in main_services:
@@ -120,6 +121,30 @@ class MainServiceIndex(SearchIndex):
             main_services=main_services,
         )
 
+    def get_by_id(self, id: str) -> T.Optional[MainServiceDocument]:
+        q = query.Term("id_kw", id)
+        idx = self.get_index()
+        with idx.searcher() as searcher:
+            doc_list = [hit.fields() for hit in searcher.search(q, limit=1)]
+        try:
+            return MainServiceDocument.from_dict(doc_list[0])
+        except IndexError:
+            return None
+
+    @cache.memoize(expire=3)
+    def top_k(self, k: int = 20) -> T.List[MainServiceDocument]:
+        q = query.Or([query.Term("regional", True), query.Term("regional", False)])
+        idx = self.get_index()
+        multi_facet = sorting.MultiFacet()
+        multi_facet.add_field("weight", reverse=True)
+        multi_facet.add_field("id")
+        doc_list = list()
+        with idx.searcher() as searcher:
+            for hit in searcher.search(q, sortedby=multi_facet, limit=k):
+                doc_list.append(MainServiceDocument.from_dict(hit.fields()))
+        return doc_list
+
+    @cache.memoize(expire=3600)
     def search(
         self,
         query_str: str,
@@ -128,7 +153,7 @@ class MainServiceIndex(SearchIndex):
         """
         Full-text-search for main service.
         """
-        query = qparser.MultifieldParser(
+        q = qparser.MultifieldParser(
             [
                 "id",
                 "name",
@@ -143,7 +168,7 @@ class MainServiceIndex(SearchIndex):
         multi_facet.add_field("id")
         doc_list = list()
         with index.searcher() as searcher:
-            for hit in searcher.search(query, sortedby=multi_facet, limit=limit):
+            for hit in searcher.search(q, sortedby=multi_facet, limit=limit):
                 doc_list.append(MainServiceDocument.from_dict(hit.fields()))
 
         # if the "id" starts with the query str, prioritize it
