@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 
 import typing as T
+import json
 import dataclasses
+
+from .paths import dir_data
 
 
 @dataclasses.dataclass
@@ -10,8 +13,8 @@ class BaseModel:
     def from_dict(cls, data: T.Dict[str, T.Any]):
         new_data = {}
         for field in dataclasses.fields(cls):
-             if data.get(field.name) is not None:
-                 new_data[field.name] = data[field.name]
+            if data.get(field.name) is not None:
+                new_data[field.name] = data[field.name]
         return cls(**new_data)
 
     def to_dict(self) -> T.Dict[str, T.Any]:
@@ -37,7 +40,7 @@ class SubService(BaseModel):
     id: str = dataclasses.field()
     name: str = dataclasses.field()
     url: str = dataclasses.field()
-    weight: int = dataclasses.field(default=1) # 1 - 100
+    weight: int = dataclasses.field(default=1)  # 1 - 100
     short_name: T.Optional[str] = dataclasses.field(default=None)
     search_terms: T.List[str] = dataclasses.field(default_factory=list)
 
@@ -64,8 +67,16 @@ class MainService(BaseModel):
     name: str = dataclasses.field()
     url: str = dataclasses.field()
     regional: bool = dataclasses.field(default=True)
-    weight: int = dataclasses.field(default=1) # 1 - 1000
+    weight: int = dataclasses.field(default=1)  # 1 - 1000
     short_name: T.Optional[str] = dataclasses.field(default=None)
     description: T.Optional[str] = dataclasses.field(default=None)
     search_terms: T.List[str] = dataclasses.field(default_factory=list)
     sub_services: T.List[SubService] = dataclasses.field(default_factory=list)
+
+
+def load_data() -> T.List[MainService]:
+    main_services = list()
+    for path_json in dir_data.select_by_ext(".json"):
+        main_service = MainService.from_dict(json.loads(path_json.read_text()))
+        main_services.append(main_service)
+    return main_services
