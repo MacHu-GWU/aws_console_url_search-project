@@ -46,7 +46,9 @@
             "url": "/iamv2/home#/policies",
             "weight": 60,
             "short_name": null,
-            "search_terms": []
+            "search_terms": [
+                "policy"
+            ]
         },
         {
             "id": "identityproviders",
