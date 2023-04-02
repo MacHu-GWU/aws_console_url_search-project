@@ -48,7 +48,7 @@ class MainServiceSchema(fields.SchemaClass):
         stored=False,
         field_boost=2.0,
     )
-    has_sub_svc = fields.BOOLEAN(stored=True)
+    has_sub_svc = fields.STORED()
 
 
 main_service_schema = MainServiceSchema()
