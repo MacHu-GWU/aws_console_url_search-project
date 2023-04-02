@@ -3,7 +3,7 @@
     "name": "Simple Queue Service",
     "url": "/sqs/v2/home#/queues",
     "regional": true,
-    "weight": 1,
+    "weight": 960,
     "short_name": "SQS",
     "description": "SQS Managed Message Queues",
     "search_terms": [],

@@ -3,7 +3,7 @@
     "name": "Simple Notification Service",
     "url": "/sns/v3/home#/dashboard",
     "regional": true,
-    "weight": 1,
+    "weight": 950,
     "short_name": "SNS",
     "description": "SNS Pub/Sub, Mobile Push and SMS",
     "search_terms": [],

@@ -3,7 +3,7 @@
     "name": "DynamoDB",
     "url": "/dynamodbv2/home#dashboard",
     "regional": true,
-    "weight": 1,
+    "weight": 940,
     "short_name": null,
     "description": "Managed NoSQL Database",
     "search_terms": [],

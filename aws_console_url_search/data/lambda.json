@@ -3,7 +3,7 @@
     "name": "Lambda",
     "url": "/lambda/home#/discover",
     "regional": true,
-    "weight": 1,
+    "weight": 920,
     "short_name": null,
     "description": "Run Code without Thinking about Servers",
     "search_terms": [],

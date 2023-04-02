@@ -3,7 +3,7 @@
     "name": "Glue",
     "url": "/glue/home#catalog:tab=databases",
     "regional": true,
-    "weight": 1,
+    "weight": 910,
     "short_name": null,
     "description": "fully managed ETL (extract, transform, and load) service",
     "search_terms": [],

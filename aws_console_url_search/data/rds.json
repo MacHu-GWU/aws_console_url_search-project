@@ -3,7 +3,7 @@
     "name": "Relational Database Service",
     "url": "/rds/home#",
     "regional": true,
-    "weight": 1,
+    "weight": 930,
     "short_name": "RDS",
     "description": "Managed Relational Database Service",
     "search_terms": [],
