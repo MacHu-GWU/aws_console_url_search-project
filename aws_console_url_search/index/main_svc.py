@@ -116,8 +116,8 @@ class MainServiceIndex(SearchIndex):
             }
 
             new_document = {k: v for k, v in document.items() if bool(v)}
-            new_document["has_sub_svc"] = bool(main_service.sub_services)
             new_document["regional"] = main_service.regional
+            new_document["has_sub_svc"] = bool(main_service.sub_services)
             writer.add_document(**new_document)
         writer.commit()
 

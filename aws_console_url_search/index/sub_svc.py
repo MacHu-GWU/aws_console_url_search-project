@@ -52,6 +52,7 @@ sub_service_schema = SubServiceSchema()
 
 @dataclasses.dataclass
 class SubServiceDocument(BaseModel):
+    main_svc_id: str = dataclasses.field()
     id: str = dataclasses.field()
     name: str = dataclasses.field()
     url: str = dataclasses.field()
@@ -60,7 +61,7 @@ class SubServiceDocument(BaseModel):
 
     @property
     def title(self) -> str:
-        return self.name
+        return f"{self.main_svc_id}-{self.id}"
 
     @property
     def subtitle(self) -> str:

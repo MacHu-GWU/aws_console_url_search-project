@@ -59,7 +59,7 @@ class TestMainServiceIndex:
             assert self.index.search(query_str)[0].id == id
 
     def test_title_and_subtitle(self):
-        for doc in self.index.top_k():
+        for doc in self.index.top_k(k=100):
             _ = doc.title
             _ = doc.subtitle
 
