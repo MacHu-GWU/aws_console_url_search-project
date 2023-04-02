@@ -56,8 +56,12 @@ class TestSubServiceIndex:
             ("iam", "policy", "policies"),
         ]
         for main_svc_id, query_str, sub_svc_id in test_cases:
-            print(main_svc_id, query_str, sub_svc_id)
             assert self.index.search(main_svc_id, query_str)[0].id == sub_svc_id
+
+    def test_title_and_subtitle(self):
+        for doc in self.index.top_k("ec2"):
+            _ = doc.title
+            _ = doc.subtitle
 
 
 if __name__ == "__main__":

@@ -58,6 +58,11 @@ class TestMainServiceIndex:
         for query_str, id in test_cases:
             assert self.index.search(query_str)[0].id == id
 
+    def test_title_and_subtitle(self):
+        for doc in self.index.top_k():
+            _ = doc.title
+            _ = doc.subtitle
+
 
 if __name__ == "__main__":
     from aws_console_url_search.tests import run_cov_test
