@@ -60,7 +60,7 @@ class MainServiceDocument(BaseModel):
     name: str = dataclasses.field()
     url: str = dataclasses.field()
     regional: bool = dataclasses.field()
-    weight: float = dataclasses.field()
+    weight: int = dataclasses.field()
     has_sub_svc: bool = dataclasses.field()
     short_name: T.Optional[str] = dataclasses.field(default=None)
     description: T.Optional[str] = dataclasses.field(default=None)
@@ -149,10 +149,7 @@ class MainServiceIndex(SearchIndex):
         self,
         query_str: str,
         limit: int = 20,
-    ) -> T.List[MainService]:
-        """
-        Full-text-search for main service.
-        """
+    ) -> T.List[MainServiceDocument]:
         q = qparser.MultifieldParser(
             [
                 "id",
