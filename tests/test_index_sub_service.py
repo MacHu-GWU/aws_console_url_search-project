@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import typing as T
+from aws_console_url_search.tests import run_cov_test
 from aws_console_url_search.index.sub_svc import (
     SubServiceIndex,
 )
@@ -65,6 +66,4 @@ class TestSubServiceIndex:
 
 
 if __name__ == "__main__":
-    from aws_console_url_search.tests import run_cov_test
-
     run_cov_test(__file__, "aws_console_url_search.index.sub_svc", preview=False)
