@@ -77,6 +77,8 @@ class MainService(BaseModel):
 def load_data() -> T.List[MainService]:
     main_services = list()
     for path_json in dir_data.select_by_ext(".json"):
-        main_service = MainService.from_dict(json.loads(path_json.read_text()))
+        data = json.loads(path_json.read_text())
+        data["sub_services"] = [SubService.from_dict(dct) for dct in data["sub_services"]]
+        main_service = MainService.from_dict(data)
         main_services.append(main_service)
     return main_services
