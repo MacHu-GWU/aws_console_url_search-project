@@ -1,5 +1,5 @@
 
-.. image:: https://readthedocs.org/projects/aws_console_url_search/badge/?version=latest
+.. .. image:: https://readthedocs.org/projects/aws_console_url_search/badge/?version=latest
     :target: https://aws_console_url_search.readthedocs.io/index.html
     :alt: Documentation Status
 
@@ -24,13 +24,13 @@
 ------
 
 
-.. image:: https://img.shields.io/badge/Link-Document-blue.svg
+.. .. image:: https://img.shields.io/badge/Link-Document-blue.svg
     :target: https://aws_console_url_search.readthedocs.io/index.html
 
-.. image:: https://img.shields.io/badge/Link-API-blue.svg
+.. .. image:: https://img.shields.io/badge/Link-API-blue.svg
     :target: https://aws_console_url_search.readthedocs.io/py-modindex.html
 
-.. image:: https://img.shields.io/badge/Link-Source_Code-blue.svg
+.. .. image:: https://img.shields.io/badge/Link-Source_Code-blue.svg
     :target: https://aws_console_url_search.readthedocs.io/py-modindex.html
 
 .. image:: https://img.shields.io/badge/Link-Install-blue.svg
@@ -51,8 +51,7 @@
 
 Welcome to ``aws_console_url_search`` Documentation
 ==============================================================================
-
-Documentation for ``aws_console_url_search``.
+``aws_console_url_search`` allows you to full-text search AWS services.
 
 
 .. _install:

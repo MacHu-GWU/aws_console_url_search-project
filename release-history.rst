@@ -4,7 +4,7 @@ Release and Version History
 ==============================================================================
 
 
-0.0.3 (TODO)
+Backlog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 **Features and Improvements**
 
@@ -15,18 +15,12 @@ Release and Version History
 **Miscellaneous**
 
 
-0.0.2 (TODO)
+0.1.1 (2023-04-02)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 **Features and Improvements**
-
-**Minor Improvements**
-
-**Bugfixes**
-
-**Miscellaneous**
-
-
-0.0.1 (2023-04-01)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - First release
+- Add three different search index:
+    1. main service index
+    2. sub service index
+    3. any service index

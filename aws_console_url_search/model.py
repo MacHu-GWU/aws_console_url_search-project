@@ -22,7 +22,7 @@ class BaseModel:
 
 
 @dataclasses.dataclass
-class SubService(BaseModel):
+class SubService(BaseModel): # pragma: no cover
     """
     Refer to a sub service of a main service. For example, AWS S3 bucket
     is a sub service of AWS S3.
@@ -46,7 +46,7 @@ class SubService(BaseModel):
 
 
 @dataclasses.dataclass
-class MainService(BaseModel):
+class MainService(BaseModel): # pragma: no cover
     """
     Refer to a main service. For example, AWS S3 is a main service.
 

@@ -4,6 +4,7 @@ import typing as T
 import dataclasses
 from aws_console_url_search.model import (
     BaseModel,
+    load_data,
 )
 
 
@@ -23,6 +24,12 @@ class TestBaseModel:
         assert model.flag is True
 
         assert model.to_dict() == {"id": "id-1", "name": None, "flag": True}
+
+
+def test_load_data():
+    main_services = load_data()
+
+    _ = main_services
 
 
 if __name__ == "__main__":

@@ -1,8 +1,5 @@
 cached-property>=1.5.2; python_version < '3.8'
 dataclasses>=0.8; python_version == '3.6'
-whoosh
-typing-extensions
-pathlib_mate
-diskcache
-python-Levenshtein
-fuzzywuzzy
+whoosh  # for full text search
+pathlib_mate  # for pathlib
+diskcache  # for cache
