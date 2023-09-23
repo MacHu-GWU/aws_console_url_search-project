@@ -1,5 +1,11 @@
 # This requirements file should only include dependencies for development
-twine                                   # make distribution archive
-wheel                                   # make pre-compiled distribution package
-PyYAML
-rich
+# publish package to PyPI
+twine==3.8.0
+# build wheel distribution format
+wheel==0.37.1
+# beautiful formatting for console output
+rich==12.6.0
+# build CLI app made easy
+fire==0.5.0
+# yaml file parser
+PyYAML==5.4.1

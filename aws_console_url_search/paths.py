@@ -21,3 +21,9 @@ dir_any_service_index = dir_aws_console_url_search.joinpath("any_service_index")
 # test related
 # ------------------------------------------------------------------------------
 dir_tests = dir_project_root.joinpath("tests")
+
+# ------------------------------------------------------------------------------
+# ${dir_project_root}/workspace/
+# ------------------------------------------------------------------------------
+dir_workspace = dir_project_root.joinpath("workspace")
+dir_workspace_data = dir_workspace.joinpath("data")
