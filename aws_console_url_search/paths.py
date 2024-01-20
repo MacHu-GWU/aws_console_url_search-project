@@ -2,10 +2,9 @@
 
 from pathlib_mate import Path
 
-_dir_here = Path.dir_here(__file__)
+dir_python_lib = Path.dir_here(__file__)
 
-dir_project_root = _dir_here.parent
-dir_data = _dir_here.joinpath("data")
+dir_project_root = dir_python_lib.parent
 
 # ------------------------------------------------------------------------------
 # Virtual Environment Related
@@ -34,7 +33,9 @@ dir_any_service_index = dir_aws_console_url_search.joinpath("any_service_index")
 
 
 # ------------------------------------------------------------------------------
-# ${dir_project_root}/workspace/
+# ${dir_project_root}/aws_console_url_search/
 # ------------------------------------------------------------------------------
-dir_workspace = dir_project_root.joinpath("workspace")
-dir_workspace_data = dir_workspace.joinpath("data")
+path_data_json = dir_python_lib.joinpath("data.json")
+
+dir_code = dir_python_lib.joinpath("code")
+path_console_urls_json = dir_code.joinpath("console-urls.json")
