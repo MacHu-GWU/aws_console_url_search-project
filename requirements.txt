@@ -3,7 +3,7 @@ dataclasses>=0.8; python_version == '3.6'
 # full text search engine
 sayt>=0.6.5,<1.0.0
 # terminal application framework
-zelfred>=0.3.1,<0.4.0
+zelfred>=0.3.2,<0.4.0
 # copy text to clipboard
 pyperclip>=1.8.2,<2.0.0
 # cli tool

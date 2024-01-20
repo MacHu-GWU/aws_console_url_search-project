@@ -22,13 +22,16 @@ def get_sort_key(id: str, weight: int):
     return f"{str(9999 - weight).zfill(4)}-{id}"
 
 
-def sort_console_url_data(console_url_data: dict) -> dict:
+def normalize_console_url_data(console_url_data: dict) -> dict:
     service_list = list()
 
     for service_id, service in console_url_data.items():
         service_sort_key = get_sort_key(id=service_id, weight=service.get("weight", 1))
         sub_service_list = list()
         for sub_service_id, sub_service in service.get("sub_services", {}).items():
+            if not sub_service_id.startswith(f"{service_id}-"):
+                raise ValueError(f"{sub_service_id!r} does not start with {service_id!r}")
+            sub_service_id = service_id + "-" + sub_service_id.split("-", 1)[1].lower().replace(" ", "_").replace("-", "_").replace(".", "_")
             sub_service_sort_key = get_sort_key(
                 id=sub_service_id, weight=sub_service.get("weight", 1)
             )

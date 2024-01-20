@@ -133,9 +133,9 @@ def preprocess_query(query: T.Optional[str]) -> str:  # pragma: no cover
                 else:
                     try:
                         if word[-2] != "~" and not word.endswith("!~"):
-                            word = f"{word}~1"
+                            word = f"{word}~1/2"
                     except IndexError:
-                        word = f"{word}~1"
+                        word = f"{word}~1/2"
                     words.append(word)
         if words:
             return " ".join(words)
