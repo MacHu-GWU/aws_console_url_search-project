@@ -31,7 +31,7 @@ class ServiceDocument:
     # fmt: off
     id: str = dataclasses.field()
     service_name: str = dataclasses.field()
-    sub_service_name: str = dataclasses.field()
+    sub_service_name: T.Optional[str] = dataclasses.field()
     description: str = dataclasses.field()
     url: str = dataclasses.field()
     globally: bool = dataclasses.field()
@@ -79,6 +79,11 @@ class ServiceDocument:
             name_ngram=name_ngram,
             weight=weight,
         )
+
+    @classmethod
+    def from_result(cls, doc: sayt.T_DOCUMENT):
+        doc.setdefault("sub_service_name", None)
+        return cls(**doc)
 
 
 def downloader() -> T.List[sayt.T_DOCUMENT]:
