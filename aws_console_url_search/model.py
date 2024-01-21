@@ -4,81 +4,76 @@ import typing as T
 import json
 import dataclasses
 
-from .paths import dir_data
+from .constants import MAX_SERVICE_RANK, MAX_SUB_SERVICE_RANK
+from .paths import path_data_json
 
 
 @dataclasses.dataclass
 class BaseModel:
     @classmethod
     def from_dict(cls, data: T.Dict[str, T.Any]):
-        new_data = {}
-        for field in dataclasses.fields(cls):
-            if data.get(field.name) is not None:
-                new_data[field.name] = data[field.name]
-        return cls(**new_data)
+        return cls(**data)
 
     def to_dict(self) -> T.Dict[str, T.Any]:
         return dataclasses.asdict(self)
 
 
 @dataclasses.dataclass
-class SubService(BaseModel): # pragma: no cover
-    """
-    Refer to a sub service of a main service. For example, AWS S3 bucket
-    is a sub service of AWS S3.
-
-    :param id: unique id, for example, "buckets" is for AWS S3 buckets
-    :param name: e.g. "Buckets"
-    :param url: the href part of the url, for example, "the full url" is
-        https://console.aws.amazon.com/s3/buckets?region=us-east-1
-        then the "url" is "/s3/buckets"
-    :param weight: the sorting weight in the searching
-    :param short_name: e.g. "buckets"
-    :param search_terms: additional search terms for ngram search
-    """
-
+class Service:
     id: str = dataclasses.field()
     name: str = dataclasses.field()
     url: str = dataclasses.field()
-    weight: int = dataclasses.field(default=1)  # 1 - 100
-    short_name: T.Optional[str] = dataclasses.field(default=None)
-    search_terms: T.List[str] = dataclasses.field(default_factory=list)
+    description: str = dataclasses.field()
+    globally: bool = dataclasses.field()
+    terms: T.Optional[str] = dataclasses.field()
+    emoji: T.Optional[str] = dataclasses.field()
+    rank: T.Optional[int] = dataclasses.field()
+    menus: T.List["Menu"] = dataclasses.field(default_factory=list)
+
+    @property
+    def sort_key(self) -> str:
+        return f"{str(self.rank).zfill(8)}-{str(self.id).zfill(50)}"
 
 
 @dataclasses.dataclass
-class MainService(BaseModel): # pragma: no cover
-    """
-    Refer to a main service. For example, AWS S3 is a main service.
-
-    :param id: unique id, for example, "s3" is for AWS S3
-    :param name: e.g. "Amazon Simple Storage Service"
-    :param url: the href part of the url, for example, "the full url" is
-        https://console.aws.amazon.com/s3/buckets?region=us-east-1
-        then the "url" is "/s3/buckets"
-    :param regional: see https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/
-    :param weight: the sorting weight in the searching
-    :param short_name: e.g. "S3"
-    :param description: a human friendly description
-    :param search_terms: additional search terms for ngram search
-    :param sub_services: a list of sub services
-    """
-
+class Menu:
     id: str = dataclasses.field()
     name: str = dataclasses.field()
     url: str = dataclasses.field()
-    regional: bool = dataclasses.field(default=True)
-    weight: int = dataclasses.field(default=1)  # 1 - 1000
-    short_name: T.Optional[str] = dataclasses.field(default=None)
-    description: T.Optional[str] = dataclasses.field(default=None)
-    search_terms: T.List[str] = dataclasses.field(default_factory=list)
-    sub_services: T.List[SubService] = dataclasses.field(default_factory=list)
+    description: str = dataclasses.field()
+    terms: T.Optional[str] = dataclasses.field()
+    rank: int = dataclasses.field()
+
+    @property
+    def sort_key(self) -> str:
+        return f"{str(self.rank).zfill(8)}-{str(self.id).zfill(50)}"
 
 
-def load_data() -> T.List[MainService]:
-    main_services = list()
-    for path_json in dir_data.select_by_ext(".json"):
-        data = json.loads(path_json.read_text())
-        data["sub_services"] = [SubService.from_dict(dct) for dct in data["sub_services"]]
-        main_service = MainService.from_dict(data)
-        main_services.append(main_service)
-    return main_services
+def load_data() -> T.List[Service]:
+    console_url_data = json.loads(path_data_json.read_text())
+    service_list = list()
+    for service_id, service_data in console_url_data.items():
+        menus = list()
+        for menu_id, menu_data in service_data.get("menus", {}).items():
+            menu = Menu(
+                id=menu_id,
+                name=menu_data["name"],
+                url=menu_data["url"],
+                description=menu_data.get("description", "No description"),
+                terms=menu_data.get("terms"),
+                rank=menu_data.get("rank", MAX_SUB_SERVICE_RANK),
+            )
+            menus.append(menu)
+        service = Service(
+            id=service_id,
+            name=service_data["name"],
+            url=service_data["url"],
+            description=service_data.get("description", "No description"),
+            globally=service_data.get("globally", False),
+            terms=service_data.get("terms"),
+            emoji=service_data.get("emoji"),
+            rank=service_data.get("rank", MAX_SERVICE_RANK),
+            menus=menus,
+        )
+        service_list.append(service)
+    return service_list

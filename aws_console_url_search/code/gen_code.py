@@ -59,17 +59,16 @@ def normalize_console_url_data(console_url_data: dict) -> dict:
         return s
 
     service_fields = [
-        "id",
         "name",
         "url",
         "description",
+        "globally",
         "terms",
         "emoji",
         "rank",
         "menus",
     ]
     menu_fields = [
-        "id",
         "name",
         "url",
         "description",
@@ -101,6 +100,7 @@ def normalize_console_url_data(console_url_data: dict) -> dict:
                 id=menu_id,
                 rank=menu_data.get("rank", MAX_SUB_SERVICE_RANK),
             )
+            menu_data = normalize_dict(menu_data, menu_fields)
             menu_list.append((menu_sort_key, menu_id, menu_data))
 
         service_data["menus"] = {
@@ -110,7 +110,7 @@ def normalize_console_url_data(console_url_data: dict) -> dict:
                 key=lambda x: x[0],
             )
         }
-
+        service_data = normalize_dict(service_data, service_fields)
         service_list.append((service_sort_key, service_id, service_data))
 
     console_url_data = {
