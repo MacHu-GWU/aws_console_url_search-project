@@ -76,6 +76,12 @@ class ConsoleUrlItem(Item):
     def post_enter_handler(self, ui: "UI"):
         ui.wait_next_user_input()
 
+    def ctrl_u_handler(self, ui: "UI"):
+        zf.copy_text(self.variables["url"])
+
+    def post_ctrl_u_handler(self, ui: "UI"):
+        ui.wait_next_user_input()
+
 
 # ------------------------------------------------------------------------------
 # search_service_handler

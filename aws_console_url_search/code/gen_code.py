@@ -18,7 +18,12 @@ from ..constants import MAX_SERVICE_RANK, MAX_MENU_RANK
 
 
 def load_console_url_data() -> dict:
-    return json.loads(path_console_urls_json.read_text())
+    content = path_console_urls_json.read_text()
+    # human may copy and paste when doing data entry, so we need to fix
+    # common mistakes.
+    content = content.replace("https://us-east-1.console.aws.amazon.com", "")
+    content = content.replace("us-east-1", "{region}")
+    return json.loads(content)
 
 
 def dump_console_url_data(console_url_data: dict):

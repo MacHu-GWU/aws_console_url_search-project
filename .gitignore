@@ -3,6 +3,7 @@ aws_console_url_search_venv/
 aws_console_url_search.egg-info/
 aws_console_url_search-*/
 tmp/
+console-urls-backup.json
 
 
 # Byte-compiled / optimized / DLL files

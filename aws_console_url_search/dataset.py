@@ -14,17 +14,17 @@ from .constants import MAX_SERVICE_RANK, MAX_MENU_RANK
 
 # fmt: off
 fields = [
-    sayt.IdField(name="id", stored=True),
+    sayt.IdField(name="id", stored=True, field_boost=10.0),
     sayt.StoredField(name="srv_name"),
     sayt.StoredField(name="menu_name"),
     sayt.StoredField(name="url"),
     sayt.StoredField(name="desc"),
     sayt.StoredField(name="globally"), # global is a python reserved keyword, so we have to use globally
     sayt.StoredField(name="emoji"),
-    sayt.TextField(name="srv_text", stored=True),
-    sayt.NgramWordsField(name="srv_ngram", stored=True, minsize=2, maxsize=6),
-    sayt.TextField(name="menu_text", stored=True),
-    sayt.NgramWordsField(name="menu_ngram", stored=True, minsize=2, maxsize=6),
+    sayt.TextField(name="srv_text", stored=True, field_boost=7.5),
+    sayt.NgramWordsField(name="srv_ngram", stored=True, minsize=2, maxsize=6, field_boost=5.0),
+    sayt.TextField(name="menu_text", stored=True, field_boost=2.0),
+    sayt.NgramWordsField(name="menu_ngram", stored=True, minsize=2, maxsize=6, field_boost=1.0),
     sayt.NumericField(name="rank", stored=True, sortable=True, ascending=True),
 ]
 # fmt: on
@@ -85,8 +85,8 @@ class ServiceDocument:
             id=menu.id,
             srv_name=service.name,
             menu_name=menu.name,
-            url=service.url,
-            desc=service.description,
+            url=menu.url,
+            desc=menu.description,
             globally=service.globally,
             emoji=service.emoji,
             rank=service_rank * MAX_MENU_RANK + menu_rank,
