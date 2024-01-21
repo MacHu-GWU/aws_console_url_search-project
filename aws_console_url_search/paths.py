@@ -34,6 +34,7 @@ path_config = dir_aws_console_url_search.joinpath("config.json")
 # ${dir_project_root}/aws_console_url_search/
 # ------------------------------------------------------------------------------
 path_data_json = dir_python_lib.joinpath("data.json")
+path_region_json = dir_python_lib.joinpath("region.tsv")
 
 dir_code = dir_python_lib.joinpath("code")
 path_console_urls_json = dir_code.joinpath("console-urls.json")

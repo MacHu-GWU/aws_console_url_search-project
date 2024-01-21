@@ -1,15 +1,22 @@
 # -*- coding: utf-8 -*-
 
-from aws_console_url_search.dataset import downloader, dataset, preprocess_query
+from aws_console_url_search.dataset import (
+    service_downloader,
+    service_dataset,
+    preprocess_query,
+    region_downloader,
+    region_dataset,
+)
 from rich import print as rprint
 
-# docs = downloader()
-# for doc in docs[:10]:
-#     rprint(doc)
+# rprint(service_downloader()[:10])
+# rprint(region_downloader()[:10])
 
-query = "oss"
+# query = "oss"
+query = ""
 
 if __name__ == "__main__":
     final_query = preprocess_query(query)
-    res = dataset.search(query=final_query, refresh_data=True)
+    # res = service_dataset.search(query=final_query, refresh_data=True)
+    res = region_dataset.search(query=final_query, refresh_data=True)
     rprint(res)

@@ -84,41 +84,49 @@
             "iam-roles": {
                 "name": "Roles",
                 "url": "/iamv2/home?region={region}#/roles",
+                "description": "An IAM role is an identity you can create that has specific permissions with credentials that are valid for short durations. Roles can be assumed by entities that you trust.",
                 "rank": 10
             },
             "iam-policies": {
                 "name": "Policies",
                 "url": "/iamv2/home?region={region}#/policies",
+                "description": "A policy is an object in AWS that defines permissions.",
                 "rank": 20
             },
             "iam-users": {
                 "name": "Users",
                 "url": "/iamv2/home?region={region}#/users",
+                "description": "An IAM user is an identity with long-term credentials that is used to interact with AWS in an account.",
                 "rank": 30
             },
             "iam-user_groups": {
                 "name": "User groups",
                 "url": "/iamv2/home?region={region}#/groups",
+                "description": "A user group is a collection of IAM users. Use groups to specify permissions for a collection of users.",
                 "rank": 40
             },
             "iam-new_policy": {
-                "name": "Create New IAM Policy",
+                "name": "Create a New IAM Policy",
                 "url": "/iam/home#/policies$new?step=edit",
+                "description": "Create a New IAM Policy",
                 "rank": 50
             },
             "iam-new_role": {
-                "name": "Create New IAM Role",
+                "name": "Create a New IAM Role",
                 "url": "/iamv2/home#/roles/create?step=selectEntities",
+                "description": "Create a New IAM Role",
                 "rank": 60
             },
             "iam-identity_providers": {
                 "name": "Identity providers",
                 "url": "/iamv2/home?region={region}#/identity_providers",
+                "description": "Use an identity provider (IdP) to manage your user identities outside of AWS, but grant the user identities permissions to use AWS resources in your account.",
                 "rank": 70
             },
             "iam-account_settings": {
                 "name": "Account settings",
                 "url": "/iamv2/home?region={region}#/account_settings",
+                "description": "Use the Account settings page to configure password requirements for IAM users, create temporary credentials for trusted users using AWS Security Token Service, and turn on endpoints from which you can request temporary credentials.",
                 "rank": 80
             },
             "iam-access_analyzer": {
@@ -144,6 +152,7 @@
             "iam-credential_report": {
                 "name": "Credential report",
                 "url": "/iamv2/home?region={region}#/credential_report",
+                "description": "The credentials report lists all your IAM users in this account and the status of their various credentials. After a report is created, it is stored for up to four hours.",
                 "rank": 100
             },
             "iam-organization_activity": {
@@ -154,11 +163,13 @@
             "iam-scps": {
                 "name": "Service control policies (SCPs)",
                 "url": "/iam/home?region={region}#/organizations/ServiceControlPolicies",
+                "description": "A service control policy (SCP) limits permissions for entities in member accounts in AWS Organizations.",
                 "rank": 120
             },
             "iam-dashboard": {
                 "name": "Dashboard",
-                "url": "/iam/home?region={region}#/home"
+                "url": "/iam/home?region={region}#/home",
+                "description": "IAM Dashboard"
             }
         }
     },
@@ -863,6 +874,11 @@
                 "name": "Designer",
                 "url": "/cloudformation/designer/home?region={region}",
                 "rank": 30
+            },
+            "cloudformation-exports": {
+                "name": "Exports",
+                "url": "/cloudformation/home?region={region}#/exports",
+                "rank": 40
             }
         }
     },
@@ -1090,16 +1106,19 @@
         "name": "Step Functions",
         "url": "/states/home?region={region}#/statemachines",
         "description": "Coordinate Distributed Applications",
+        "terms": "sfn",
         "emoji": "🎶",
         "rank": 180,
         "menus": {
-            "stepfunctions-activities": {
-                "name": "Activities",
-                "url": "/states/home?region={region}#/activities"
-            },
             "stepfunctions-statemachines": {
                 "name": "State machines (SM)",
-                "url": "/states/home?region={region}#/statemachines"
+                "url": "/states/home?region={region}#/statemachines",
+                "rank": 10
+            },
+            "stepfunctions-activities": {
+                "name": "Activities",
+                "url": "/states/home?region={region}#/activities",
+                "rank": 20
             },
             "stepfunctions-featurespotlight": {
                 "name": "Feature spotlight",
@@ -2010,10 +2029,6 @@
         "description": "Gain operational insights and take action on AWS resources",
         "rank": 470,
         "menus": {
-            "systemsmanager-phd": {
-                "name": "PHD",
-                "url": "/systems-manager/insights/personalHealthDashboard?region={region}#"
-            },
             "systemsmanager-explorer": {
                 "name": "Explorer",
                 "url": "/systems-manager/explorer?region={region}#"

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import typing as T
+import csv
 import dataclasses
 
 import sayt.api as sayt
@@ -8,10 +9,14 @@ import sayt.api as sayt
 from .paths import (
     dir_index,
     dir_cache,
+    path_region_json,
 )
 from .model import Service, Menu, load_data
-from .constants import MAX_SERVICE_RANK, MAX_MENU_RANK
+from .constants import MAX_SERVICE_RANK, MAX_MENU_RANK, REGION_LIST
 
+# ------------------------------------------------------------------------------
+# ServiceDocument
+# ------------------------------------------------------------------------------
 # fmt: off
 fields = [
     sayt.IdField(name="id", stored=True, field_boost=10.0),
@@ -105,7 +110,7 @@ class ServiceDocument:
         return cls(**doc)
 
 
-def downloader() -> T.List[sayt.T_DOCUMENT]:
+def service_downloader() -> T.List[sayt.T_DOCUMENT]:
     """
     Read data from ``path_data_json`` file.
     """
@@ -118,16 +123,16 @@ def downloader() -> T.List[sayt.T_DOCUMENT]:
     return [dataclasses.asdict(doc) for doc in docs]
 
 
-index_name = "services"
-dataset = sayt.DataSet(
+service_index_name = "services"
+service_dataset = sayt.DataSet(
     dir_index=dir_index,
-    index_name=index_name,
+    index_name=service_index_name,
     fields=fields,
     dir_cache=dir_cache,
-    cache_key=index_name,
-    cache_tag=index_name,
+    cache_key=service_index_name,
+    cache_tag=service_index_name,
     cache_expire=24 * 60 * 60,
-    downloader=downloader,
+    downloader=service_downloader,
 )
 
 
@@ -160,3 +165,39 @@ def preprocess_query(query: T.Optional[str]) -> str:  # pragma: no cover
             return "*"
     else:
         return "*"
+
+
+# ------------------------------------------------------------------------------
+# AWS Region
+# ------------------------------------------------------------------------------
+@dataclasses.dataclass
+class RegionDocument:
+    id: str = dataclasses.field()
+    region: str = dataclasses.field()
+    desc: str = dataclasses.field()
+
+
+def region_downloader():
+    docs = list()
+    with path_region_json.open("r", newline="") as f:
+        reader = csv.reader(f, delimiter="\t")
+        for region, desc in reader:
+            docs.append(dict(id=region, region=region, desc=desc))
+    return docs
+
+
+region_index_name = "regions"
+region_dataset = sayt.DataSet(
+    dir_index=dir_index,
+    index_name=region_index_name,
+    fields=[
+        sayt.IdField(name="id", stored=True),
+        sayt.NgramWordsField(name="region", stored=True, minsize=2, maxsize=6),
+        sayt.StoredField(name="desc"),
+    ],
+    dir_cache=dir_cache,
+    cache_key=region_index_name,
+    cache_tag=region_index_name,
+    cache_expire=60,
+    downloader=region_downloader,
+)
