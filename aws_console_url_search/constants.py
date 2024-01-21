@@ -4,7 +4,7 @@ import enum
 
 CACHE_EXPIRE = 3600
 MAX_SERVICE_RANK = 10000
-MAX_SUB_SERVICE_RANK = 1000
+MAX_MENU_RANK = 1000
 
 
 class _AwsConsoleDomain:

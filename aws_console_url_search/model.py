@@ -1,10 +1,16 @@
 # -*- coding: utf-8 -*-
 
+"""
+[CN] maintainer guide
+
+这个模块中定义的是 ``aws_console_url_search/data.json`` 中的数据结构.
+"""
+
 import typing as T
 import json
 import dataclasses
 
-from .constants import MAX_SERVICE_RANK, MAX_SUB_SERVICE_RANK
+from .constants import MAX_SERVICE_RANK, MAX_MENU_RANK
 from .paths import path_data_json
 
 
@@ -20,15 +26,17 @@ class BaseModel:
 
 @dataclasses.dataclass
 class Service:
+    # fmt: off
     id: str = dataclasses.field()
     name: str = dataclasses.field()
     url: str = dataclasses.field()
     description: str = dataclasses.field()
-    globally: bool = dataclasses.field()
+    globally: bool = dataclasses.field()  # global is a python reserved keyword, so we have to use globally
     terms: T.Optional[str] = dataclasses.field()
     emoji: T.Optional[str] = dataclasses.field()
     rank: T.Optional[int] = dataclasses.field()
     menus: T.List["Menu"] = dataclasses.field(default_factory=list)
+    # fmt: on
 
     @property
     def sort_key(self) -> str:
@@ -61,7 +69,7 @@ def load_data() -> T.List[Service]:
                 url=menu_data["url"],
                 description=menu_data.get("description", "No description"),
                 terms=menu_data.get("terms"),
-                rank=menu_data.get("rank", MAX_SUB_SERVICE_RANK),
+                rank=menu_data.get("rank", MAX_MENU_RANK),
             )
             menus.append(menu)
         service = Service(
@@ -69,7 +77,7 @@ def load_data() -> T.List[Service]:
             name=service_data["name"],
             url=service_data["url"],
             description=service_data.get("description", "No description"),
-            globally=service_data.get("globally", False),
+            globally=service_data.get("global", False),
             terms=service_data.get("terms"),
             emoji=service_data.get("emoji"),
             rank=service_data.get("rank", MAX_SERVICE_RANK),

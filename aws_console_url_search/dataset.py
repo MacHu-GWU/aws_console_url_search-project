@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import typing as T
-import json
 import dataclasses
 
 import sayt.api as sayt
@@ -9,96 +8,113 @@ import sayt.api as sayt
 from .paths import (
     dir_index,
     dir_cache,
-    path_data_json,
 )
+from .model import Service, Menu, load_data
+from .constants import MAX_SERVICE_RANK, MAX_MENU_RANK
 
-
+# fmt: off
 fields = [
     sayt.IdField(name="id", stored=True),
-    sayt.StoredField(name="service_name"),
-    sayt.StoredField(name="sub_service_name"),
-    sayt.StoredField(name="description"),
+    sayt.StoredField(name="srv_name"),
+    sayt.StoredField(name="menu_name"),
     sayt.StoredField(name="url"),
-    sayt.StoredField(name="globally"),
-    sayt.TextField(name="name_text", stored=True),
-    sayt.NgramWordsField(name="name_ngram", stored=True, minsize=2, maxsize=6),
-    sayt.NumericField(name="weight", stored=True, sortable=True, ascending=False),
+    sayt.StoredField(name="desc"),
+    sayt.StoredField(name="globally"), # global is a python reserved keyword, so we have to use globally
+    sayt.StoredField(name="emoji"),
+    sayt.TextField(name="srv_text", stored=True),
+    sayt.NgramWordsField(name="srv_ngram", stored=True, minsize=2, maxsize=6),
+    sayt.TextField(name="menu_text", stored=True),
+    sayt.NgramWordsField(name="menu_ngram", stored=True, minsize=2, maxsize=6),
+    sayt.NumericField(name="rank", stored=True, sortable=True, ascending=True),
 ]
+# fmt: on
 
 
 @dataclasses.dataclass
 class ServiceDocument:
     # fmt: off
     id: str = dataclasses.field()
-    service_name: str = dataclasses.field()
-    sub_service_name: T.Optional[str] = dataclasses.field()
-    description: str = dataclasses.field()
+    srv_name: str = dataclasses.field()
+    menu_name: T.Optional[str] = dataclasses.field()
     url: str = dataclasses.field()
-    globally: bool = dataclasses.field()
-    name_text: str = dataclasses.field()
-    name_ngram: str = dataclasses.field()
-    weight: int = dataclasses.field()
+    desc: str = dataclasses.field()
+    globally: bool = dataclasses.field() # global is a python reserved keyword, so we have to use globally
+    emoji: T.Optional[str] = dataclasses.field()
+    rank: int = dataclasses.field()
+    srv_text: str = dataclasses.field()
+    srv_ngram: str = dataclasses.field()
+    menu_text: T.Optional[str] = dataclasses.field()
+    menu_ngram: T.Optional[str] = dataclasses.field()
     # fmt: on
 
     @classmethod
-    def new(
-        cls,
-        service_id: str,
-        service_data: dict,
-        sub_service_id: T.Optional[str] = None,
-        sub_service_data: T.Optional[dict] = None,
-    ):
-        service_name = service_data.get("name", service_id)
-        service_weight = service_data.get("weight", 1) * 10000
-        globally = service_data.get("globally", False)
-        if sub_service_id is None:
-            id = service_id
-            sub_service_name = None
-            description = service_data.get("description", "No description")
-            url = service_data["url"]
-            name_ngram = service_name
-            name_text = name_ngram
-            sub_service_weight = 9999
+    def from_service(cls, service: Service):
+        service_rank = service.rank if service.rank else MAX_SERVICE_RANK
+        if service.terms:
+            srv_text = f"{service.name} {service.terms}"
         else:
-            id = sub_service_id
-            sub_service_name = sub_service_data.get("name", sub_service_id)
-            description = sub_service_data.get("description", "No description")
-            url = sub_service_data["url"]
-            name_ngram = f"{service_name} {sub_service_name}"
-            name_text = name_ngram
-            sub_service_weight = sub_service_data.get("weight", 1)
-        weight = service_weight + sub_service_weight
+            srv_text = service.name
         return cls(
-            id=id,
-            service_name=service_name,
-            sub_service_name=sub_service_name,
-            description=description,
-            url=url,
-            globally=globally,
-            name_text=name_text,
-            name_ngram=name_ngram,
-            weight=weight,
+            id=service.id,
+            srv_name=service.name,
+            menu_name=None,
+            url=service.url,
+            desc=service.description,
+            globally=service.globally,
+            emoji=service.emoji,
+            rank=0 - (MAX_SERVICE_RANK - service_rank),
+            srv_text=srv_text,
+            srv_ngram=srv_text,
+            menu_text=None,
+            menu_ngram=None,
+        )
+
+    @classmethod
+    def from_menu(cls, service: Service, menu: Menu):
+        service_rank = service.rank if service.rank else MAX_SERVICE_RANK
+        menu_rank = menu.rank if menu.rank else MAX_MENU_RANK
+        if service.terms:
+            srv_text = f"{service.name} {service.terms}"
+        else:
+            srv_text = service.name
+        if menu.terms:
+            menu_text = f"{menu.name} {menu.terms}"
+        else:
+            menu_text = menu.name
+        return cls(
+            id=menu.id,
+            srv_name=service.name,
+            menu_name=menu.name,
+            url=service.url,
+            desc=service.description,
+            globally=service.globally,
+            emoji=service.emoji,
+            rank=service_rank * MAX_MENU_RANK + menu_rank,
+            srv_text=srv_text,
+            srv_ngram=srv_text,
+            menu_text=menu_text,
+            menu_ngram=menu_text,
         )
 
     @classmethod
     def from_result(cls, doc: sayt.T_DOCUMENT):
-        doc.setdefault("sub_service_name", None)
+        doc.setdefault("menu_name", None)
+        doc.setdefault("emoji", None)
+        doc.setdefault("menu_text", None)
+        doc.setdefault("menu_ngram", None)
         return cls(**doc)
 
 
 def downloader() -> T.List[sayt.T_DOCUMENT]:
-    console_url_data = json.loads(path_data_json.read_text())
+    """
+    Read data from ``path_data_json`` file.
+    """
     docs = list()
-    for service_id, service_data in console_url_data.items():
-        doc = ServiceDocument.new(service_id, service_data)
-        docs.append(doc)
-        for sub_service_id, sub_service_data in service_data.get(
-            "sub_services", {}
-        ).items():
-            sub_doc = ServiceDocument.new(
-                service_id, service_data, sub_service_id, sub_service_data
-            )
-            docs.append(sub_doc)
+    service_list = load_data()
+    for service in service_list:
+        docs.append(ServiceDocument.from_service(service))
+        for menu in service.menus:
+            docs.append(ServiceDocument.from_menu(service, menu))
     return [dataclasses.asdict(doc) for doc in docs]
 
 
@@ -131,6 +147,7 @@ def preprocess_query(query: T.Optional[str]) -> str:  # pragma: no cover
                     if word == "*":
                         words.append(word)
                 else:
+                    # for fuzzy search, the first two characters must be matched
                     try:
                         if word[-2] != "~" and not word.endswith("!~"):
                             word = f"{word}~1/2"

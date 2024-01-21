@@ -14,7 +14,7 @@ from ..paths import (
     path_console_urls_json,
     path_data_json,
 )
-from ..constants import MAX_SERVICE_RANK, MAX_SUB_SERVICE_RANK
+from ..constants import MAX_SERVICE_RANK, MAX_MENU_RANK
 
 
 def load_console_url_data() -> dict:
@@ -98,7 +98,7 @@ def normalize_console_url_data(console_url_data: dict) -> dict:
             menu_id = service_id + "-" + slugify(second_part_id.lower(), " -.", sep="_")
             menu_sort_key = get_sort_key(
                 id=menu_id,
-                rank=menu_data.get("rank", MAX_SUB_SERVICE_RANK),
+                rank=menu_data.get("rank", MAX_MENU_RANK),
             )
             menu_data = normalize_dict(menu_data, menu_fields)
             menu_list.append((menu_sort_key, menu_id, menu_data))

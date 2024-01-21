@@ -42,9 +42,26 @@ class ConsoleUrlItem(Item):
         console_domain: str,
         aws_region: str,
     ):
+        service_id = doc.id.split("-", 1)[0]
+        if doc.emoji:
+            emoji = f"{doc.emoji} "
+        else:
+            emoji = ""
+        if doc.menu_name:
+            title = "🌠 {}{} | {}".format(
+                emoji,
+                format_resource_type(service_id),
+                doc.menu_name,
+            )
+        else:
+            title = "🌟 {}{} ({})".format(
+                emoji,
+                format_resource_type(service_id),
+                doc.srv_name,
+            )
         return cls(
-            title=f"{doc.id} | {doc.name_ngram}",
-            subtitle=f"{doc.description}",
+            title=title,
+            subtitle=f"{doc.desc}",
             uid=doc.id,
             variables={
                 "url": "https://{}{}".format(
