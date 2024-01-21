@@ -3,6 +3,8 @@
 import enum
 
 CACHE_EXPIRE = 3600
+MAX_SERVICE_RANK = 10000
+MAX_SUB_SERVICE_RANK = 1000
 
 
 class _AwsConsoleDomain:
@@ -16,7 +18,7 @@ class _AwsUsGovConsoleDomain:
 
 
 class _AwsCNConsoleDomain:
-    domain = "amazonaws-cm.com"
+    domain = "amazonaws-cn.com"
     subdomain = "console"
 
 
