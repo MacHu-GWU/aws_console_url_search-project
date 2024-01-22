@@ -25,19 +25,19 @@ from .paths import path_current_region
 # ------------------------------------------------------------------------------
 @dataclasses.dataclass
 class Item(zf.Item):
-    def post_enter_handler(self, ui: "UI"):
+    def post_enter_handler(self, ui: "UI"):  # pragma: no cover
         ui.wait_next_user_input()
 
-    def post_ctrl_a_handler(self, ui: "UI"):
+    def post_ctrl_a_handler(self, ui: "UI"):  # pragma: no cover
         ui.wait_next_user_input()
 
-    def post_ctrl_w_handler(self, ui: "UI"):
+    def post_ctrl_w_handler(self, ui: "UI"):  # pragma: no cover
         ui.wait_next_user_input()
 
-    def post_ctrl_u_handler(self, ui: "UI"):
+    def post_ctrl_u_handler(self, ui: "UI"):  # pragma: no cover
         ui.wait_next_user_input()
 
-    def post_ctrl_p_handler(self, ui: "UI"):
+    def post_ctrl_p_handler(self, ui: "UI"):  # pragma: no cover
         ui.wait_next_user_input()
 
 
@@ -91,13 +91,13 @@ class ConsoleUrlItem(Item):
             },
         )
 
-    def enter_handler(self, ui: "UI"):
+    def enter_handler(self, ui: "UI"):  # pragma: no cover
         zf.open_url_or_print(self.variables["url"])
 
-    def ctrl_a_handler(self, ui: "UI"):
+    def ctrl_a_handler(self, ui: "UI"):  # pragma: no cover
         self.ctrl_u_handler(ui)
 
-    def ctrl_u_handler(self, ui: "UI"):
+    def ctrl_u_handler(self, ui: "UI"):  # pragma: no cover
         zf.copy_text(self.variables["url"])
 
 
@@ -199,16 +199,16 @@ class RegionItem(Item):
         ui.line_editor.clear_line()
         ui.line_editor.enter_text(self.variables["line_input"])
 
-    def ctrl_a_handler(self, ui: "UI"):
+    def ctrl_a_handler(self, ui: "UI"):  # pragma: no cover
         zf.copy_or_print(self.variables["region"])
 
-    def post_ctrl_a_handler(self, ui: "UI"):
+    def post_ctrl_a_handler(self, ui: "UI"):  # pragma: no cover
         self.post_enter_handler(ui)
 
-    def ctrl_u_handler(self, ui: "UI"):
+    def ctrl_u_handler(self, ui: "UI"):  # pragma: no cover
         self.ctrl_a_handler(ui)
 
-    def post_ctrl_u_handler(self, ui: "UI"):
+    def post_ctrl_u_handler(self, ui: "UI"):  # pragma: no cover
         self.post_enter_handler(ui)
 
 
@@ -297,7 +297,7 @@ class UI(zf.UI):
 
     @property
     def console_domain(self) -> str:
-        if self.aws_region in {"us-gov-east-1", "us-gov-west-1"}:
+        if self.aws_region in {"us-gov-east-1", "us-gov-west-1"}:  # pragma: no cover
             return "console.amazonaws-us-gov.com"
         else:
             return "console.aws.amazon.com"
