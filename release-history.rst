@@ -15,12 +15,10 @@ Backlog
 **Miscellaneous**
 
 
-0.1.1 (2023-04-02)
+0.1.1 (2024-01-22)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 **Features and Improvements**
 
 - First release
-- Add three different search index:
-    1. main service index
-    2. sub service index
-    3. any service index
+- Allow user to search AWS service console url or sub menu url.
+- Allow user to switch AWS region by typing ``!@``.

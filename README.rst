@@ -74,6 +74,13 @@ Then you can type ``acs`` CLI command to enter the interactive UI:
 .. code-block::
 
     $ acs
+
+
+Usage - Search AWS Service or Menu URL
+------------------------------------------------------------------------------
+.. code-block::
+
+    $ acs
     [Query (region = None)]: <--- type your query here
     [x] 🌟 🪣 s3 (None)
           Store and retrieve any amount of data from anywhere
@@ -85,3 +92,21 @@ Then you can type ``acs`` CLI command to enter the interactive UI:
           Isolated Cloud Resources
     [ ] 🌟 dynamodb (None)
           Managed NoSQL Database
+
+
+Usage - Switch AWS Region
+------------------------------------------------------------------------------
+.. code-block::
+
+    $ acs
+    (AWS Region Query): !@ <--- type your aws region query here
+    [x] no region | Auto decide based on your AWS Console history
+          Hit Enter set region and return to search
+    [ ] us-east-1 | US East (N. Virginia)
+          Hit Enter set region and return to search
+    [ ] us-east-2 | US East (Ohio)
+          Hit Enter set region and return to search
+    [ ] us-west-1 | US West (N. California)
+          Hit Enter set region and return to search
+    [ ] us-west-2 | US West (Oregon)
+          Hit Enter set region and return to search
