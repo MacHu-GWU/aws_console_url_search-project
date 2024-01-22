@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+"""
+todo: docstring
+"""
+
 import typing as T
 import dataclasses
 
@@ -73,13 +77,22 @@ class ConsoleUrlItem(Item):
         )
 
     def enter_handler(self, ui: "UI"):  # pragma: no cover
+        """
+        Open the url in browser. If not working, then print the url.
+        """
         zf.open_url_or_print(self.variables["url"])
 
     def ctrl_a_handler(self, ui: "UI"):  # pragma: no cover
+        """
+        Copy the URL to clipboard. If not working, then print the url.
+        """
         self.ctrl_u_handler(ui)
 
     def ctrl_u_handler(self, ui: "UI"):  # pragma: no cover
-        zf.copy_text(self.variables["url"])
+        """
+        Copy the URL to clipboard. If not working, then print the url.
+        """
+        zf.copy_or_print(self.variables["url"])
 
 
 def search_service_and_return_items(
@@ -185,12 +198,18 @@ class RegionItem(Item):
         ui.line_editor.enter_text(self.variables["line_input"])
 
     def ctrl_a_handler(self, ui: "UI"):  # pragma: no cover
+        """
+        Copy the AWS region to clipboard. If not working, then print the region.
+        """
         zf.copy_or_print(self.variables["region"])
 
     def post_ctrl_a_handler(self, ui: "UI"):  # pragma: no cover
         self.post_enter_handler(ui)
 
     def ctrl_u_handler(self, ui: "UI"):  # pragma: no cover
+        """
+        Copy the AWS region to clipboard. If not working, then print the region.
+        """
         self.ctrl_a_handler(ui)
 
     def post_ctrl_u_handler(self, ui: "UI"):  # pragma: no cover
@@ -255,6 +274,9 @@ def handler(
     ui: T.Optional["UI"] = None,
     skip_ui: bool = False,
 ) -> T.List[T.Union["ConsoleUrlItem", "RegionItem", "InfoItem"]]:
+    """
+    The main UI handler.
+    """
     # user can use !@ to switch aws region
     if len(query.split("!@", 1)) > 1:
         line_input, aws_region_query = query.split("!@", 1)

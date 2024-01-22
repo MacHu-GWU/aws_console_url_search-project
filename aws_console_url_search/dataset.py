@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
 
+"""
+[CN] maintainer guide
+
+这个模块定义了所有要用到的 ``sayt.DataSet``.
+"""
+
 import typing as T
 import csv
 import dataclasses
@@ -47,7 +53,7 @@ def preprocess_query(query: T.Optional[str]) -> str:  # pragma: no cover
 
 
 # ------------------------------------------------------------------------------
-# ServiceDocument
+# AWS Service and Menu
 # ------------------------------------------------------------------------------
 # fmt: off
 fields = [
