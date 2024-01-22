@@ -2,22 +2,10 @@
 
 import typing as T
 import dataclasses
+
 import zelfred.api as zf
 
 from .dataset import ServiceDocument, service_dataset, preprocess_query, region_dataset
-from .terminal import (
-    terminal,
-    format_shortcut,
-    highlight_text,
-    format_resource_type,
-    format_key,
-    format_value,
-    format_key_value,
-    remove_text_format,
-    ShortcutEnum,
-    SUBTITLE,
-    SHORT_SUBTITLE,
-)
 from .paths import path_current_region
 
 # ------------------------------------------------------------------------------
@@ -54,6 +42,7 @@ class ConsoleUrlItem(Item):
     @classmethod
     def from_doc(
         cls,
+        ui: "UI",
         doc: ServiceDocument,
         console_domain: str,
         aws_region: T.Optional[str],
@@ -64,17 +53,9 @@ class ConsoleUrlItem(Item):
         else:
             emoji = ""
         if doc.menu_name:
-            title = "🌠 {}{} | {}".format(
-                emoji,
-                format_resource_type(service_id),
-                doc.menu_name,
-            )
+            title = f"🌠 {emoji}{ui.format_resource_type(service_id)} | {doc.menu_name}"
         else:
-            title = "🌟 {}{} ({})".format(
-                emoji,
-                format_resource_type(service_id),
-                doc.srv_name,
-            )
+            title = f"🌟 {emoji}{ui.format_resource_type(service_id)} ({doc.menu_name})"
         if aws_region:
             region_part = f"region={aws_region}"
         else:
@@ -119,7 +100,8 @@ def search_service_and_return_items(
         console_domain = ui.console_domain
         return [
             ConsoleUrlItem.from_doc(
-                doc,
+                ui=ui,
+                doc=doc,
                 console_domain=console_domain,
                 aws_region=ui.aws_region,
             )
@@ -167,13 +149,16 @@ def search_service_handler(
 @dataclasses.dataclass
 class RegionItem(Item):
     @classmethod
-    def from_region(cls, line_input: str, region: str, description: str):
+    def from_region(
+        cls,
+        ui: "UI",
+        line_input: str,
+        region: str,
+        description: str,
+    ):
         return cls(
-            title="{} | {}".format(
-                highlight_text(region),
-                description,
-            ),
-            subtitle=f"Hit {ShortcutEnum.ENTER} set region and return to search",
+            title=f"{ui.format_highlight(region)} | {description}",
+            subtitle=f"Hit {ui.ENTER} set region and return to search",
             uid=region,
             autocomplete=line_input + "!@" + region,
             variables={"region": region, "line_input": line_input},
@@ -229,6 +214,7 @@ def search_region_and_return_items(
     if len(docs):
         return [
             RegionItem.from_region(
+                ui=ui,
                 line_input=line_input,
                 region=doc["region"],
                 description=doc["desc"],
@@ -239,7 +225,7 @@ def search_region_and_return_items(
         return [
             InfoItem(
                 title="No region found",
-                subtitle=f"Hit {ShortcutEnum.TAB} to return to re-enter a region query",
+                subtitle=f"Hit {ui.TAB} to return to re-enter a region query",
                 autocomplete=line_input + "!@",
                 uid="no-region-found",
             )
@@ -291,7 +277,6 @@ class UI(zf.UI):
         self.aws_region = aws_region
         super().__init__(
             handler=handler,
-            terminal=terminal,
             **kwargs,
         )
 
@@ -301,3 +286,12 @@ class UI(zf.UI):
             return "console.amazonaws-us-gov.com"
         else:
             return "console.aws.amazon.com"
+
+    def format_resource_type(self, resource_type: str) -> str:
+        """
+        Format a resource type text with terminal color. In this project,
+        the color is blue. Example:
+
+            :blue:`sfn-statemachine`: name = CognitoUserManagement
+        """
+        return f"{self.terminal.green}{resource_type}{self.terminal.normal}"

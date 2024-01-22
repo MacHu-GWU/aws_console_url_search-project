@@ -3,8 +3,12 @@
 [run]
 omit =
     aws_console_url_search/_version.py
+    aws_console_url_search/cli/*
+    aws_console_url_search/code/*
     aws_console_url_search/docs/*
     aws_console_url_search/tests/*
+    aws_console_url_search/vendor/*
+    aws_console_url_search/ui_init.py
 
 [report]
 # Regexes for lines to exclude from consideration
