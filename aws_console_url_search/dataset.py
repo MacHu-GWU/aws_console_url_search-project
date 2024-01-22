@@ -12,7 +12,39 @@ from .paths import (
     path_region_json,
 )
 from .model import Service, Menu, load_data
-from .constants import MAX_SERVICE_RANK, MAX_MENU_RANK, REGION_LIST
+from .constants import MAX_SERVICE_RANK, MAX_MENU_RANK
+
+
+def preprocess_query(query: T.Optional[str]) -> str:  # pragma: no cover
+    """
+    Preprocess query, automatically add fuzzy search term if applicable.
+    """
+    delimiter = ".-_@+"
+    if query:
+        for char in delimiter:
+            query = query.replace(char, " ")
+        words = list()
+        for word in query.split():
+            if word.strip():
+                word = word.strip()
+                if len(word) == 1:
+                    if word == "*":
+                        words.append(word)
+                else:
+                    # for fuzzy search, the first two characters must be matched
+                    try:
+                        if word[-2] != "~" and not word.endswith("!~"):
+                            word = f"{word}~1/2"
+                    except IndexError:
+                        word = f"{word}~1/2"
+                    words.append(word)
+        if words:
+            return " ".join(words)
+        else:
+            return "*"
+    else:
+        return "*"
+
 
 # ------------------------------------------------------------------------------
 # ServiceDocument
@@ -134,37 +166,6 @@ service_dataset = sayt.DataSet(
     cache_expire=24 * 60 * 60,
     downloader=service_downloader,
 )
-
-
-def preprocess_query(query: T.Optional[str]) -> str:  # pragma: no cover
-    """
-    Preprocess query, automatically add fuzzy search term if applicable.
-    """
-    delimiter = ".-_@+"
-    if query:
-        for char in delimiter:
-            query = query.replace(char, " ")
-        words = list()
-        for word in query.split():
-            if word.strip():
-                word = word.strip()
-                if len(word) == 1:
-                    if word == "*":
-                        words.append(word)
-                else:
-                    # for fuzzy search, the first two characters must be matched
-                    try:
-                        if word[-2] != "~" and not word.endswith("!~"):
-                            word = f"{word}~1/2"
-                    except IndexError:
-                        word = f"{word}~1/2"
-                    words.append(word)
-        if words:
-            return " ".join(words)
-        else:
-            return "*"
-    else:
-        return "*"
 
 
 # ------------------------------------------------------------------------------
