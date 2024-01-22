@@ -18,7 +18,7 @@ from .terminal import (
     SUBTITLE,
     SHORT_SUBTITLE,
 )
-
+from .paths import path_current_region
 
 # ------------------------------------------------------------------------------
 # Item
@@ -56,7 +56,7 @@ class ConsoleUrlItem(Item):
         cls,
         doc: ServiceDocument,
         console_domain: str,
-        aws_region: str,
+        aws_region: T.Optional[str],
     ):
         service_id = doc.id.split("-", 1)[0]
         if doc.emoji:
@@ -75,13 +75,18 @@ class ConsoleUrlItem(Item):
                 format_resource_type(service_id),
                 doc.srv_name,
             )
+        if aws_region:
+            region_part = f"region={aws_region}"
+        else:
+            region_part = ""
         return cls(
             title=title,
             subtitle=f"{doc.desc}",
             uid=doc.id,
+            autocomplete=doc.id,
             variables={
                 "url": "https://{}{}".format(
-                    console_domain, doc.url.format(region=aws_region)
+                    console_domain, doc.url.format(region=region_part)
                 )
             },
         )
@@ -175,12 +180,17 @@ class RegionItem(Item):
         )
 
     def enter_handler(self, ui: "UI"):
-        "no region"
+        """
+        Update ``UI.aws_region`` attribute and update the
+        ``${HOME}/.aws_console_url_search/current_region.txt`` file.
+        """
         region = self.variables["region"]
-        if region == "no-region":
+        if region == "no region":
             ui.aws_region = None
+            path_current_region.write_text("")
         else:
             ui.aws_region = region
+            path_current_region.write_text(region)
 
     def post_enter_handler(self, ui: "UI"):  # pragma: no cover
         """
@@ -259,6 +269,7 @@ def handler(
     ui: T.Optional["UI"] = None,
     skip_ui: bool = False,
 ) -> T.List[T.Union["ConsoleUrlItem", "RegionItem", "InfoItem"]]:
+    # user can use !@ to switch aws region
     if len(query.split("!@", 1)) > 1:
         line_input, aws_region_query = query.split("!@", 1)
         return search_region_handler(

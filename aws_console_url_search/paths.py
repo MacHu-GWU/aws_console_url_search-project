@@ -29,6 +29,7 @@ dir_aws_console_url_search = dir_home.joinpath(".aws_console_url_search")
 dir_index = dir_aws_console_url_search.joinpath(".index")
 dir_cache = dir_aws_console_url_search.joinpath(".cache")
 path_config = dir_aws_console_url_search.joinpath("config.json")
+path_current_region = dir_aws_console_url_search.joinpath("current_region.txt")
 
 # ------------------------------------------------------------------------------
 # ${dir_project_root}/aws_console_url_search/

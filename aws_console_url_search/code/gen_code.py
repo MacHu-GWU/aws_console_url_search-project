@@ -22,7 +22,7 @@ def load_console_url_data() -> dict:
     # human may copy and paste when doing data entry, so we need to fix
     # common mistakes.
     content = content.replace("https://us-east-1.console.aws.amazon.com", "")
-    content = content.replace("us-east-1", "{region}")
+    content = content.replace("region=us-east-1", "{region}")
     return json.loads(content)
 
 
