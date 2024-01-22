@@ -23,7 +23,6 @@
 
 ------
 
-
 .. .. image:: https://img.shields.io/badge/Link-Document-blue.svg
     :target: https://aws_console_url_search.readthedocs.io/index.html
 
@@ -51,14 +50,13 @@
 
 Welcome to ``aws_console_url_search`` Documentation
 ==============================================================================
-``aws_console_url_search`` allows you to full-text search AWS services.
+``aws_console_url_search (acs)`` is a cross-platform CLI tool for lightning-fast AWS Console URL opener. Say goodbye to hunting through tabs or bookmarks—acs instantly locates and opens your desired AWS Console URL in your default browser. It's not just fast; it's blazingly fast! With pinpoint accuracy and interactive features, acs redefines your AWS Console experience.
 
 
 .. _install:
 
 Install
 ------------------------------------------------------------------------------
-
 ``aws_console_url_search`` is released on PyPI, so all you need is:
 
 .. code-block:: console
@@ -70,3 +68,20 @@ To upgrade to latest version:
 .. code-block:: console
 
     $ pip install --upgrade aws_console_url_search
+
+Then you can type ``acs`` CLI command to enter the interactive UI:
+
+.. code-block::
+
+    $ acs
+    [Query (region = None)]: <--- type your query here
+    [x] 🌟 🪣 s3 (None)
+          Store and retrieve any amount of data from anywhere
+    [ ] 🌟 👤 iam (None)
+          Manage User Access and Encryption Keys
+    [ ] 🌟 🖥 ec2 (None)
+          Virtual Servers in the Cloud
+    [ ] 🌟 🌐 vpc (None)
+          Isolated Cloud Resources
+    [ ] 🌟 dynamodb (None)
+          Managed NoSQL Database
