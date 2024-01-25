@@ -18,6 +18,9 @@
 .. image:: https://img.shields.io/pypi/pyversions/aws_console_url_search.svg
     :target: https://pypi.python.org/pypi/aws_console_url_search
 
+.. image:: https://img.shields.io/badge/Release_History!--None.svg?style=social
+    :target: https://github.com/MacHu-GWU/aws_console_url_search-project/blob/main/release-history.rst
+
 .. image:: https://img.shields.io/badge/STAR_Me_on_GitHub!--None.svg?style=social
     :target: https://github.com/MacHu-GWU/aws_console_url_search-project
 
