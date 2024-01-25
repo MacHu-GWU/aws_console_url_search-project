@@ -59,7 +59,7 @@ class ConsoleUrlItem(Item):
         if doc.menu_name:
             title = f"🌠 {emoji}{ui.format_resource_type(service_id)} | {doc.menu_name}"
         else:
-            title = f"🌟 {emoji}{ui.format_resource_type(service_id)} ({doc.menu_name})"
+            title = f"🌟 {emoji}{ui.format_resource_type(service_id)}"
         if aws_region:
             region_part = f"region={aws_region}"
         else:
@@ -70,6 +70,7 @@ class ConsoleUrlItem(Item):
             uid=doc.id,
             autocomplete=doc.id,
             variables={
+                "doc": doc,
                 "url": "https://{}{}".format(
                     console_domain, doc.url.format(region=region_part)
                 )
