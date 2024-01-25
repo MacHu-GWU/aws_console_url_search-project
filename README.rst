@@ -56,6 +56,12 @@ Welcome to ``aws_console_url_search`` Documentation
 ``aws_console_url_search (acs)`` is a cross-platform CLI tool for lightning-fast AWS Console URL opener. Say goodbye to hunting through tabs or bookmarks—acs instantly locates and opens your desired AWS Console URL in your default browser. It's not just fast; it's blazingly fast! With pinpoint accuracy and interactive features, acs redefines your AWS Console experience.
 
 
+Demo
+------------------------------------------------------------------------------
+.. image:: https://asciinema.org/a/633187.svg
+    :target: https://asciinema.org/a/633187
+
+
 .. _install:
 
 Install
