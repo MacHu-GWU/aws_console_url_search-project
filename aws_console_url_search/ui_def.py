@@ -64,17 +64,18 @@ class ConsoleUrlItem(Item):
             region_part = f"region={aws_region}"
         else:
             region_part = ""
+        if doc.url.startswith("http"):
+            url = doc.url
+        else:
+            url = "https://{}{}".format(
+                console_domain, doc.url.format(region=region_part)
+            )
         return cls(
             title=title,
             subtitle=f"{doc.desc}",
             uid=doc.id,
             autocomplete=doc.id,
-            variables={
-                "doc": doc,
-                "url": "https://{}{}".format(
-                    console_domain, doc.url.format(region=region_part)
-                )
-            },
+            variables={"doc": doc, "url": url},
         )
 
     def enter_handler(self, ui: "UI"):  # pragma: no cover

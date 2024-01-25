@@ -67,7 +67,7 @@ def load_data() -> T.List[Service]:
                 id=menu_id,
                 name=menu_data["name"],
                 url=menu_data["url"],
-                description=menu_data.get("description", "No description"),
+                description=menu_data.get("description", menu_data["name"]),
                 terms=menu_data.get("terms"),
                 rank=menu_data.get("rank", MAX_MENU_RANK),
             )
@@ -76,7 +76,7 @@ def load_data() -> T.List[Service]:
             id=service_id,
             name=service_data["name"],
             url=service_data["url"],
-            description=service_data.get("description", "No description"),
+            description=service_data.get("description", service_data["name"]),
             globally=service_data.get("global", False),
             terms=service_data.get("terms"),
             emoji=service_data.get("emoji"),

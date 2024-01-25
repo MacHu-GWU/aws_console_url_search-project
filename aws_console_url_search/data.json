@@ -12,6 +12,11 @@
                 "description": "Buckets are containers for data stored in S3",
                 "rank": 10
             },
+            "s3-createbucket": {
+                "name": "Create new Bucket",
+                "url": "/s3/bucket/create?{region}",
+                "rank": 15
+            },
             "s3-access_grants": {
                 "name": "S3 Access Grants",
                 "url": "/s3/access-grants?{region}",
@@ -185,9 +190,15 @@
                 "url": "/ec2/v2/home?{region}#Instances:",
                 "rank": 10
             },
+            "ec2-launchaninstance": {
+                "name": "Launch a new instance ",
+                "url": "/ec2/home?{region}#LaunchInstances:",
+                "rank": 15
+            },
             "ec2-securitygroups": {
                 "name": "Security Groups (SG)",
                 "url": "/ec2/v2/home?{region}#SecurityGroups:",
+                "description": "A security group acts as a virtual firewall that controls the traffic for one or more instances.",
                 "rank": 20
             },
             "ec2-amis": {
@@ -289,158 +300,166 @@
     },
     "vpc": {
         "name": "Virtual Private Cloud",
-        "url": "/vpc/home?{region}#dashboard:",
+        "url": "/vpcconsole/home?{region}#Home:",
         "description": "Isolated Cloud Resources",
+        "terms": "vpc",
         "emoji": "🌐",
         "rank": 40,
         "menus": {
             "vpc-vpcs": {
                 "name": "Your VPCs",
-                "url": "/vpc/home?{region}#vpcs:",
+                "url": "/vpcconsole/home?{region}#vpcs:",
+                "description": "VPC enables you to launch AWS resources into a virtual network that you've defined.",
                 "rank": 10
             },
             "vpc-subnets": {
                 "name": "Subnets",
-                "url": "/vpc/home?{region}#subnets:",
+                "url": "/vpcconsole/home?{region}#subnets:",
+                "description": "A subnet is a range of IP addresses in your VPC.",
                 "rank": 20
             },
             "vpc-elasticips": {
                 "name": "Elastic IPs",
-                "url": "/vpc/home?{region}#Addresses:",
+                "url": "/vpcconsole/home?{region}#Addresses:",
                 "rank": 30
             },
             "vpc-endpoints": {
                 "name": "Endpoints",
-                "url": "/vpc/home?{region}#Endpoints:",
+                "url": "/vpcconsole/home?{region}#Endpoints:",
                 "rank": 40
             },
             "vpc-internetgateways": {
                 "name": "Internet Gateways",
-                "url": "/vpc/home?{region}#igws:",
+                "url": "/vpcconsole/home?{region}#igws:",
+                "description": "An internet gateway is a horizontally scaled, redundant, and highly available VPC component that enables communication between your VPC and the internet.",
                 "rank": 50
             },
             "vpc-natgateways": {
                 "name": "NAT Gateways",
-                "url": "/vpc/home?{region}#NatGateways:",
+                "url": "/vpcconsole/home?{region}#NatGateways:",
+                "description": "You can use a NAT gateway so that instances in a private subnet can connect to services outside your VPC but external services cannot initiate a connection with those instances.",
                 "rank": 60
             },
             "vpc-routetables": {
                 "name": "Route Tables",
-                "url": "/vpc/home?{region}#RouteTables:",
+                "url": "/vpcconsole/home?{region}#RouteTables:",
+                "description": "A route table contains a set of rules, called routes, that are used to determine where network traffic from your subnet or gateway is directed.",
                 "rank": 70
             },
             "vpc-securitygroups": {
-                "name": "Security Groups",
-                "url": "/vpc/home?{region}#SecurityGroups:",
+                "name": "Security Groups (SG)",
+                "url": "/vpcconsole/home?{region}#SecurityGroups:",
+                "description": "A security group acts as a virtual firewall that controls the traffic for one or more instances.",
                 "rank": 80
             },
             "vpc-settings": {
                 "name": "Settings",
-                "url": "/vpc/home?{region}#Settings:"
+                "url": "/vpcconsole/home?{region}#Settings:"
             },
             "vpc-dashboard": {
                 "name": "Dashboard",
-                "url": "/vpc/home?{region}#dashboard:"
+                "url": "/vpcconsole/home?{region}#Home:"
             },
             "vpc-firewalls": {
                 "name": "Firewalls",
-                "url": "/vpc/home?{region}#NetworkFirewalls:"
+                "url": "/vpcconsole/home?{region}#NetworkFirewalls:"
             },
             "vpc-rulegroups": {
                 "name": "Rule Groups",
-                "url": "/vpc/home?{region}#DNSFirewallRuleGroups:"
+                "url": "/vpcconsole/home?{region}#DNSFirewallRuleGroups:"
             },
             "vpc-dhcpoptions": {
                 "name": "DHCP Options Sets",
-                "url": "/vpc/home?{region}#dhcpOptions:"
+                "url": "/vpcconsole/home?{region}#dhcpOptions:"
             },
             "vpc-domainlists": {
                 "name": "Domain Lists",
-                "url": "/vpc/home?{region}#DNSFirewallDomainLists:"
+                "url": "/vpcconsole/home?{region}#DNSFirewallDomainLists:"
             },
             "vpc-networkacls": {
                 "name": "Network ACLs",
-                "url": "/vpc/home?{region}#acls:"
+                "url": "/vpcconsole/home?{region}#acls:",
+                "description": "A network access control list (ACL) is an optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets."
             },
             "vpc-mirrorfilters": {
                 "name": "Mirror Filters",
-                "url": "/vpc/home?{region}#TrafficMirrorFilters:"
+                "url": "/vpcconsole/home?{region}#TrafficMirrorFilters:"
             },
             "vpc-mirrortargets": {
                 "name": "Mirror Targets",
-                "url": "/vpc/home?{region}#TrafficMirrorTargets:"
+                "url": "/vpcconsole/home?{region}#TrafficMirrorTargets:"
             },
             "vpc-mirrorsessions": {
                 "name": "Mirror Sessions",
-                "url": "/vpc/home?{region}#TrafficMirrorSessions:"
+                "url": "/vpcconsole/home?{region}#TrafficMirrorSessions:"
             },
             "vpc-networkmanager": {
                 "name": "Network Manager",
-                "url": "/vpc/home?{region}#networkmanager:"
+                "url": "/vpcconsole/home?{region}#networkmanager:"
             },
             "vpc-vpnconnections": {
                 "name": "Site-to-Site VPN Connections",
-                "url": "/vpc/home?{region}#VpnConnections:"
+                "url": "/vpcconsole/home?{region}#VpnConnections:"
             },
             "vpc-transitgateways": {
                 "name": "Transit Gateways",
-                "url": "/vpc/home?{region}#TransitGateways:"
+                "url": "/vpcconsole/home?{region}#TransitGateways:"
             },
             "vpc-carrier_gateways": {
                 "name": "Carrier Gateways",
-                "url": "/vpc/home?{region}#CarrierGateways:"
+                "url": "/vpcconsole/home?{region}#CarrierGateways:"
             },
             "vpc-customergateways": {
                 "name": "Customer Gateways",
-                "url": "/vpc/home?{region}#CustomerGateways:"
+                "url": "/vpcconsole/home?{region}#CustomerGateways:"
             },
             "vpc-endpointservices": {
                 "name": "Endpoint Services",
-                "url": "/vpc/home?{region}#EndpointServices:"
+                "url": "/vpcconsole/home?{region}#EndpointServices:"
             },
             "vpc-firewallpolicies": {
                 "name": "Firewall policies",
-                "url": "/vpc/home?{region}#NetworkFirewallPolicies:"
+                "url": "/vpcconsole/home?{region}#NetworkFirewallPolicies:"
             },
             "vpc-clientvpnendpoints": {
                 "name": "Client VPN Endpoints",
-                "url": "/vpc/home?{region}#ClientVPNEndpoints:"
+                "url": "/vpcconsole/home?{region}#ClientVPNEndpoints:"
             },
             "vpc-managedprefixlists": {
                 "name": "Managed Prefix Lists",
-                "url": "/vpc/home?{region}#ManagedPrefixLists:"
+                "url": "/vpcconsole/home?{region}#ManagedPrefixLists:"
             },
             "vpc-peeringconnections": {
                 "name": "Peering Connections",
-                "url": "/vpc/home?{region}#PeeringConnections:"
+                "url": "/vpcconsole/home?{region}#PeeringConnections:"
             },
             "vpc-reachabilityanalyzer": {
                 "name": "Reachability Analyzer",
-                "url": "/vpc/home?{region}#ReachabilityAnalyzer:"
+                "url": "/vpcconsole/home?{region}#ReachabilityAnalyzer:"
             },
             "vpc-virtualprivategateways": {
                 "name": "Virtual Private Gateways",
-                "url": "/vpc/home?{region}#VpnGateways:"
+                "url": "/vpcconsole/home?{region}#VpnGateways:"
             },
             "vpc-transitgatewaymulticast": {
                 "name": "Transit Gateway Multicast",
-                "url": "/vpc/home?{region}#TransitGatewayMulticastDomains:"
+                "url": "/vpcconsole/home?{region}#TransitGatewayMulticastDomains:"
             },
             "vpc-networkfirewallrulegroups": {
                 "name": "Network Firewall rule groups",
-                "url": "/vpc/home?{region}#NetworkFirewallRuleGroups:"
+                "url": "/vpcconsole/home?{region}#NetworkFirewallRuleGroups:"
             },
             "vpc-transitgatewayattachments": {
                 "name": "Transit Gateway Attachments",
-                "url": "/vpc/home?{region}#TransitGatewayAttachments:"
+                "url": "/vpcconsole/home?{region}#TransitGatewayAttachments:"
             },
             "vpc-transitgatewayroutetables": {
                 "name": "Transit Gateway Route Tables",
-                "url": "/vpc/home?{region}#TransitGatewayRouteTables:"
+                "url": "/vpcconsole/home?{region}#TransitGatewayRouteTables:"
             },
             "vpc-egressonlyinternetgateways": {
                 "name": "Egress Only Internet Gateways",
-                "url": "/vpc/home?{region}#EgressOnlyInternetGateways:"
+                "url": "/vpcconsole/home?{region}#EgressOnlyInternetGateways:"
             }
         }
     },
@@ -632,6 +651,11 @@
                 "url": "/lambda/home?{region}#/functions",
                 "description": "The Functions page lists all your functions in the current AWS Region. Recently created functions might not immediately appear.",
                 "rank": 10
+            },
+            "lambda-newfunction": {
+                "name": "Create new Function",
+                "url": "/lambda/home?{region}#/create/function",
+                "rank": 15
             },
             "lambda-layers": {
                 "name": "Layers",
@@ -895,22 +919,143 @@
         "description": "Build, Train, and Deploy Machine Learning Models",
         "rank": 170,
         "menus": {
+            "sagemaker-studio": {
+                "name": "Studio",
+                "url": "/sagemaker/home?{region}#/studio-landing",
+                "description": "The first fully integrated development environment (IDE) for machine learning.",
+                "rank": 20
+            },
+            "sagemaker-studiolab": {
+                "name": "Studio Lab",
+                "url": "https://studiolab.sagemaker.aws/",
+                "description": "Learn and experiment with machine learning.",
+                "rank": 30
+            },
+            "sagemaker-canvas": {
+                "name": "Canvas",
+                "url": "/sagemaker/home?{region}#/canvas-landing",
+                "description": "Generate accurate machine learning predictions – no code required.",
+                "rank": 40
+            },
+            "sagemaker-rstudio": {
+                "name": "RStudio",
+                "url": "/sagemaker/home?{region}#/rstudio-landing",
+                "description": "Industry's first fully-managed RStudio IDE in the cloud for data science and machine learning.",
+                "rank": 50
+            },
+            "sagemaker-tensorboard": {
+                "name": "TensorBoard",
+                "url": "/sagemaker/home?{region}#/tensor-board-landing",
+                "description": "Visualize and compare model convergence for SageMaker training jobs.",
+                "rank": 60
+            },
+            "sagemaker-profiler": {
+                "name": "Profiler",
+                "url": "/sagemaker/home?{region}#/profiler-landing",
+                "description": "Profile, analyze, and optimize compute resource utilization while training deep learning models with SageMaker Profiler.",
+                "rank": 70
+            },
+            "sagemaker-domains": {
+                "name": "Domains",
+                "url": "/sagemaker/home?{region}#/studio",
+                "description": "A domain includes an associated Amazon Elastic File System (EFS) volume; a list of authorized users; and a variety of security, application, policy, and Amazon Virtual Private Cloud (VPC) configurations.",
+                "rank": 110
+            },
+            "sagemaker-rolemanager": {
+                "name": "Role Manager",
+                "url": "/sagemaker/home?{region}#/role-manager-landing",
+                "description": "Amazon SageMaker Role Manager provides 3 preconfigured role personas and predefined permissions for ML activities.",
+                "rank": 120
+            },
+            "sagemaker-images": {
+                "name": "Custom Images",
+                "url": "/sagemaker/home?{region}#/images",
+                "rank": 130
+            },
+            "sagemaker-lifecycleconfigurations": {
+                "name": "Lifecycle configurations",
+                "url": "/sagemaker/home?{region}#/lifecycle-configurations",
+                "rank": 140
+            },
             "sagemaker-notebookinstances": {
                 "name": "Notebook Instances",
                 "url": "/sagemaker/home?{region}#/notebook-instances",
-                "rank": 10
+                "rank": 511
+            },
+            "sagemaker-gitrepositories": {
+                "name": "Git repositories",
+                "url": "/sagemaker/playground?{region}#/notebook-git-repositories",
+                "rank": 512
+            },
+            "sagemaker-processingjobs": {
+                "name": "Processing jobs",
+                "url": "/sagemaker/playground?{region}#/processing-jobs",
+                "rank": 521
+            },
+            "sagemaker-algorithms": {
+                "name": "Algorithms",
+                "url": "/sagemaker/playground?{region}#/algorithms/my-resources",
+                "rank": 531
+            },
+            "sagemaker-trainingjobs": {
+                "name": "Training jobs",
+                "url": "/sagemaker/playground?{region}#/jobs",
+                "rank": 532
+            },
+            "sagemaker-hyperparametertuningjobs": {
+                "name": "Hyperparameter tuning jobs",
+                "url": "/sagemaker/playground?{region}#/hyper-tuning-jobs",
+                "rank": 533
             },
             "sagemaker-groundtruchlabelingjobs": {
                 "name": "Ground Truch Labeling Jobs",
-                "url": "/sagemaker/groundtruth?{region}#/labeling-jobs"
+                "url": "/sagemaker/groundtruth?{region}#/labeling-jobs",
+                "rank": 541
             },
             "sagemaker-groundtruchlabelingdatasets": {
                 "name": "Ground Truch Labeling Datasets",
-                "url": "/sagemaker/groundtruth?{region}#/labeling-datasets"
+                "url": "/sagemaker/groundtruth?{region}#/labeling-datasets",
+                "rank": 542
             },
             "sagemaker-groundtruchlabelingworkforces": {
                 "name": "Ground Truch Labeling Workforces",
-                "url": "/sagemaker/groundtruth?{region}#/labeling-workforces"
+                "url": "/sagemaker/groundtruth?{region}#/labeling-workforces",
+                "rank": 543
+            },
+            "sagemaker-compilationjobs": {
+                "name": "Compilation jobs",
+                "url": "/sagemaker/playground?{region}#/compilation-jobs",
+                "rank": 551
+            },
+            "sagemaker-models": {
+                "name": "Models",
+                "url": "/sagemaker/playground?{region}#/models",
+                "rank": 552
+            },
+            "sagemaker-endpointconfiguration": {
+                "name": "Endpoint configuration",
+                "url": "/sagemaker/playground?{region}#/endpointConfig",
+                "rank": 553
+            },
+            "sagemaker-endpoints": {
+                "name": "Endpoints",
+                "url": "/sagemaker/playground?{region}#/endpoints",
+                "rank": 554
+            },
+            "sagemaker-batchtransformjobs": {
+                "name": "Batch transform jobs",
+                "url": "/sagemaker/playground?{region}#/transform-jobs",
+                "rank": 555
+            },
+            "sagemaker-shadowtests": {
+                "name": "Shadow tests",
+                "url": "/sagemaker/playground?{region}#/inference-experiments",
+                "rank": 556
+            },
+            "sagemaker-inferencerecommenderjobs": {
+                "name": "Inference recommender jobs",
+                "url": "/sagemaker/playground?{region}#/inference-recommender",
+                "rank": 557
             }
         }
     },
@@ -927,10 +1072,14 @@
                 "url": "/states/home?{region}#/statemachines",
                 "rank": 10
             },
+            "stepfunctions-newstatemachine": {
+                "name": "Create new State machine (SM)",
+                "url": "/states/home?{region}#/v2/statemachines/create",
+                "rank": 20
+            },
             "stepfunctions-activities": {
                 "name": "Activities",
-                "url": "/states/home?{region}#/activities",
-                "rank": 20
+                "url": "/states/home?{region}#/activities"
             },
             "stepfunctions-featurespotlight": {
                 "name": "Feature spotlight",
@@ -1118,24 +1267,24 @@
                 "rank": 2
             },
             "redshift-reserved_nodes": {
-                "name": "Redshift Reserved nodes",
+                "name": "Reserved nodes",
                 "url": "/redshiftv2/home?{region}#reserved-nodes",
                 "description": "If you intend to keep an Amazon Redshift cluster running continuously for a prolonged period, reserved nodes provide significant savings over on-demand pricing.",
                 "rank": 3
             },
             "redshift-snapshots": {
-                "name": "Redshift Snapshots",
+                "name": "Snapshots",
                 "url": "/redshiftv2/home?{region}#snapshots",
                 "rank": 4
             },
             "redshift-querye_ditor": {
-                "name": "Redshift Query editor",
+                "name": "Query editor",
                 "url": "/redshiftv2/home?{region}#query-editor:",
                 "description": "Redshift Query editor",
                 "rank": 11
             },
             "redshift-query_editor_v2": {
-                "name": "Redshift Query Editor V2",
+                "name": "Query Editor V2",
                 "url": "/sqlworkbench/home?{region}#/client",
                 "description": "Redshift Query Editor V2.",
                 "rank": 12
@@ -1176,84 +1325,84 @@
                 "rank": 35
             },
             "redshift-serverless": {
-                "name": "Redshift Serverless",
+                "name": "Serverless",
                 "url": "/redshiftv2/home?{region}#serverless-setup",
                 "description": "Get insights from data in seconds without having to manage data warehouse infrastructure.",
                 "terms": "sls",
                 "rank": 200
             },
             "redshift-serverless_dashboard": {
-                "name": "Redshift Serverless Dashboard",
+                "name": "Serverless Dashboard",
                 "url": "/redshiftv2/home?{region}#serverless-dashboard",
                 "description": "Redshift Serverless Dashboard.",
                 "terms": "sls",
                 "rank": 201
             },
             "redshift-serverless_workgroup_configuration": {
-                "name": "Redshift Serverless Workgroup configuration",
+                "name": "Serverless Workgroup configuration",
                 "url": "/redshiftv2/home?{region}#serverless-workgroups",
                 "description": "A workgroup is a collection of compute resources from which an endpoint is created.",
                 "terms": "sls",
                 "rank": 202
             },
             "redshift-serverless_namespaces_configuration": {
-                "name": "Redshift Serverless Namespaces configuration",
+                "name": "Serverless Namespaces configuration",
                 "url": "/redshiftv2/home?{region}#serverless-namespaces",
                 "description": "You can create or choose a namespace on the Amazon Redshift Serverless console when you create a workgroup.",
                 "terms": "sls",
                 "rank": 203
             },
             "redshift-serverless_data_backup": {
-                "name": "Redshift Serverless Data Backup",
+                "name": "Serverless Data Backup",
                 "url": "/redshiftv2/home?{region}#serverless-data-back-up",
                 "description": "Snapshots in Amazon Redshift Serverless are manually created backups of the databases within a namespace.",
                 "terms": "sls",
                 "rank": 204
             },
             "redshift-serverless_query_and_database_monitoring": {
-                "name": "Redshift Serverless Query and database monitoring",
+                "name": "Serverless Query and database monitoring",
                 "url": "/redshiftv2/home?{region}#serverless-query-and-database-monitoring",
                 "description": "Query and database monitoring.",
                 "terms": "sls",
                 "rank": 205
             },
             "redshift-serverless_resource_monitoring": {
-                "name": "Redshift Serverless Resource monitoring",
+                "name": "Serverless Resource monitoring",
                 "url": "/redshiftv2/home?{region}#serverless-resource-monitoring",
                 "description": "The Resource monitoring page displays a workgroup’s RPU capacity and compute usage.",
                 "terms": "sls",
                 "rank": 206
             },
             "redshift-serverless_datashares": {
-                "name": "Redshift Serverless Datashares",
+                "name": "Serverless Datashares",
                 "url": "/redshiftv2/home?{region}#serverless-data-shares",
                 "description": "You can share data for read purposes across AWS accounts.",
                 "terms": "sls",
                 "rank": 207
             },
             "redshift-serverless_manage_tags": {
-                "name": "Redshift Serverless Manage tags",
+                "name": "Serverless Manage tags",
                 "url": "/redshiftv2/home?{region}#serverless-manage-tags",
                 "description": "You can search for the resources that you want to tag by resource type or existing tags. Then you can add, remove, or modify tags for the resources in your search results.",
                 "terms": "sls",
                 "rank": 208
             },
             "redshift-serverless_zero_etl_integrations": {
-                "name": "Redshift Serverless Zero-ETL integrations",
+                "name": "Serverless Zero-ETL integrations",
                 "url": "/redshiftv2/home?{region}#serverless-zero-etl-integrations",
                 "description": "Zero-ETL integrations make transactional data available in Amazon Redshift within seconds of being written in supported sources.",
                 "terms": "sls",
                 "rank": 209
             },
             "redshift-serverless_alarms": {
-                "name": "Redshift Serverless Alarms",
+                "name": "Serverless Alarms",
                 "url": "/redshiftv2/home?{region}#serverless-create-alarm",
                 "description": "Help you make proactive decisions about your Amazon Redshift clusters as well as your Amazon Redshift Serverless workgroups and namespaces by tracking CloudWatch metrics.",
                 "terms": "sls",
                 "rank": 210
             },
             "redshift-serverless_iam_identity_center_connections": {
-                "name": "Redshift Serverless IAM Identity Center connections",
+                "name": "Serverless IAM Identity Center connections",
                 "url": "/redshiftv2/home?{region}#serverless-iam-idc-integration",
                 "description": "With IAM Identity Center you can create users and groups for the AWS account and manage their access to applications.",
                 "terms": "sls",
@@ -1391,18 +1540,20 @@
     },
     "codecommit": {
         "name": "CodeCommit",
-        "url": "/codesuite/codecommit/repositories?{region}#",
-        "description": "Store Code in Private Git Repositories",
+        "url": "/codesuite/codecommit/repositories?{region}",
+        "description": "Create secure repositories for sharing your code in the cloud.",
         "emoji": "⤴️",
         "rank": 260,
         "menus": {
             "codecommit-repositories": {
                 "name": "Repositories",
-                "url": "/codesuite/codecommit/repositories?{region}#"
+                "url": "/codesuite/codecommit/repositories?{region}#",
+                "rank": 10
             },
             "codecommit-approvalruletemplates": {
                 "name": "Approval rule templates",
-                "url": "/codesuite/codecommit/approval-rule-templates?{region}#"
+                "url": "/codesuite/codecommit/approval-rule-templates?{region}#",
+                "rank": 20
             }
         }
     },
@@ -1415,23 +1566,33 @@
         "menus": {
             "codebuild-projects": {
                 "name": "Build projects",
-                "url": "/codesuite/codebuild/projects?{region}#"
+                "url": "/codesuite/codebuild/projects?{region}#",
+                "rank": 10
             },
             "codebuild-buildhistory": {
                 "name": "Build history",
-                "url": "/codesuite/codebuild/builds/build-history?{region}#"
+                "url": "/codesuite/codebuild/builds/build-history?{region}#",
+                "rank": 20
             },
             "codebuild-reportgroups": {
                 "name": "Report groups",
-                "url": "/codesuite/codebuild/testReports/reportGroups?{region}#"
+                "url": "/codesuite/codebuild/testReports/reportGroups?{region}#",
+                "rank": 30
             },
             "codebuild-reporthistory": {
                 "name": "Report history",
-                "url": "/codesuite/codebuild/testReports/reports?{region}#"
+                "url": "/codesuite/codebuild/testReports/reports?{region}#",
+                "rank": 40
+            },
+            "codebuild-computefleets": {
+                "name": "Compute fleets",
+                "url": "/codesuite/codebuild/fleets?",
+                "rank": 50
             },
             "codebuild-accountmetrics": {
                 "name": "Account metrics",
-                "url": "/codesuite/codebuild/metrics?{region}#"
+                "url": "/codesuite/codebuild/metrics?{region}#",
+                "rank": 60
             }
         }
     },
@@ -2127,6 +2288,7 @@
         "name": "EventBridge",
         "url": "/events/home?{region}#/events",
         "description": "Serverless event bus that connects application data from your own apps, SaaS, and AWS services",
+        "terms": "events",
         "rank": 480,
         "menus": {
             "eventbridge-eventbuses": {
@@ -2611,18 +2773,23 @@
     },
     "cloud9": {
         "name": "Cloud9 (C9)",
-        "url": "/cloud9/home?{region}#",
+        "url": "/cloud9control/home?{region}#/",
         "description": "A Cloud IDE for Writing, Running, and Debugging Code",
         "menus": {
             "cloud9-environments": {
                 "name": "Dev Environments and IDE on Cloud 9",
-                "url": "/cloud9/home",
-                "rank": 8
+                "url": "/cloud9control/home?{region}#/",
+                "rank": 10
             },
-            "cloud9-ide": {
-                "name": "IDE on Cloud 9",
-                "url": "/cloud9/home",
-                "rank": 9
+            "cloud9-sharedwithme": {
+                "name": "Shared with me",
+                "url": "/cloud9control/home?{region}#/shared",
+                "rank": 20
+            },
+            "cloud9-allaccountenvironments": {
+                "name": "All account environments",
+                "url": "/cloud9control/home?{region}#/all",
+                "rank": 30
             }
         }
     },
@@ -3001,10 +3168,26 @@
         "menus": {}
     },
     "transfer": {
-        "name": "Transfer for SFTP",
-        "url": "/transfer/home?{region}#",
+        "name": "Fully managed support for SFTP, FTPS, FTP, and AS2",
+        "url": "/transfer/home?{region}#/",
         "description": "Fully-managed SFTP service for Amazon S3",
-        "menus": {}
+        "menus": {
+            "transfer-servers": {
+                "name": "Servers",
+                "url": "/transfer/home?{region}#/servers",
+                "rank": 10
+            },
+            "transfer-connectors": {
+                "name": "Connectors",
+                "url": "/transfer/home?{region}#/connectors",
+                "rank": 20
+            },
+            "transfer-workflows": {
+                "name": "Workflows",
+                "url": "/transfer/home?{region}#/workflows",
+                "rank": 30
+            }
+        }
     },
     "worklink": {
         "name": "WorkLink",
@@ -3248,34 +3431,80 @@
             }
         }
     },
+    "cleanrooms": {
+        "name": "Clean Rooms",
+        "url": "/cleanrooms/home?{region}#/?navigate",
+        "description": "Easily and securely collaborate on collective datasets without sharing or revealing underlying raw data.",
+        "menus": {
+            "cleanrooms-collaborations": {
+                "name": "Collaborations",
+                "url": "/cleanrooms/home?{region}#/collaborations?tab=active-memberships",
+                "rank": 10
+            },
+            "cleanrooms-configuredtables": {
+                "name": "Configured tables",
+                "url": "/cleanrooms/home?{region}#/configured-tables",
+                "rank": 20
+            },
+            "cleanrooms-mlmodeling": {
+                "name": "ML modeling",
+                "url": "/cleanrooms/home?{region}#/ml-modeling?tab=training-datasets",
+                "rank": 30
+            }
+        }
+    },
+    "cloudshell": {
+        "name": "AWS Cloud Shell",
+        "url": "/cloudshell/home?{region}#",
+        "description": "A browser-based shell with AWS CLI access from the AWS Management Console",
+        "menus": {}
+    },
     "comprehend": {
         "name": "Comprehend",
         "url": "/comprehend/home?{region}#home",
-        "description": "Analyze Unstructured Text",
+        "description": "Natural Language Processing and Text Analytics.",
         "menus": {
-            "comprehend-analysisjobs": {
-                "name": "Analysis jobs",
-                "url": "/comprehend/home?{region}#analysis"
-            },
             "comprehend-realtimeanalysis": {
                 "name": "Real-time analysis",
-                "url": "/comprehend/home?{region}#home"
+                "url": "/comprehend/home?{region}#home",
+                "rank": 10
             },
-            "comprehend-medicalanalysisjobs": {
+            "comprehend-analysisjobs": {
                 "name": "Analysis jobs",
-                "url": "/comprehend/home?{region}#medical-analysis"
+                "url": "/comprehend/home?{region}#analysis",
+                "rank": 20
             },
             "comprehend-customclassification": {
                 "name": "Custom classification",
-                "url": "/comprehend/home?{region}#classification"
+                "url": "/comprehend/home?{region}#classification",
+                "rank": 30
             },
             "comprehend-customentityrecognition": {
                 "name": "Custom entity recognition",
-                "url": "/comprehend/home?{region}#entity-recognition"
+                "url": "/comprehend/home?{region}#entity-recognition",
+                "rank": 40
+            },
+            "comprehend-flywheels": {
+                "name": "Flywheels",
+                "url": "/comprehend/home?{region}#flywheels",
+                "description": "A flywheel automates the training of model versions for custom models.",
+                "rank": 50
+            },
+            "comprehend-endpoints": {
+                "name": "Endpoints",
+                "url": "/comprehend/home?{region}#endpoints",
+                "description": "Endpoints make your custom models available for real-time classification or real-time entity detection.",
+                "rank": 60
             },
             "comprehend-medicalrealtimeanalysis": {
-                "name": "Real-time analysis",
-                "url": "/comprehend/home?{region}#try-comprehend-medical"
+                "name": "Medical Real-time analysis",
+                "url": "/comprehendmedical/home?{region}#try-comprehend-medical",
+                "rank": 110
+            },
+            "comprehend-medicalanalysisjobs": {
+                "name": "Medical Analysis jobs",
+                "url": "/comprehendmedical/home?{region}#medical-analysis",
+                "rank": 120
             }
         }
     },
@@ -3424,6 +3653,7 @@
         "name": "Rekognition",
         "url": "/rekognition/custom-labels?{region}#/",
         "description": "Search and Analyze Images",
+        "terms": "recognition",
         "menus": {
             "rekognition-metrics": {
                 "name": "Metrics",
@@ -3480,11 +3710,13 @@
         "menus": {
             "codeartifact-domains": {
                 "name": "Domains",
-                "url": "/codesuite/codeartifact/domains?{region}#"
+                "url": "/codesuite/codeartifact/domains?{region}#",
+                "description": "A domain contains one or more repositories."
             },
             "codeartifact-repositories": {
                 "name": "Repositories",
-                "url": "/codesuite/codeartifact/repositories?{region}#"
+                "url": "/codesuite/codeartifact/repositories?{region}#",
+                "description": "View the repositories administered by your AWS account."
             }
         }
     },
@@ -3696,24 +3928,38 @@
         "name": "Organizations",
         "url": "/organizations/v2/home/invitations",
         "description": "Policy-based management for multiple AWS accounts.",
-        "menus": {}
+        "menus": {
+            "organizations-dashboard": {
+                "name": "Dashboard",
+                "url": "/organizations/v2/home/dashboard",
+                "rank": 10
+            },
+            "organizations-invitations": {
+                "name": "Invitations",
+                "url": "/organizations/v2/home/accounts",
+                "rank": 20
+            }
+        }
     },
     "accessanalyzer": {
         "name": "Access Analyzer",
-        "url": "/access-analyzer/home?{region}#/rules",
-        "description": "Monitor access to resources",
+        "url": "/access-analyzer/home?{region}#/",
+        "description": "Simplify your journey to least privilege",
         "menus": {
+            "accessanalyzer-externalaccess": {
+                "name": "External access",
+                "url": "/access-analyzer/home?{region}#/external-access-findings",
+                "rank": 10
+            },
+            "accessanalyzer-unusedaccess": {
+                "name": "Unused access",
+                "url": "/access-analyzer/home?{region}#/unused-access-findings",
+                "rank": 20
+            },
             "accessanalyzer-settings": {
                 "name": "Settings",
-                "url": "/access-analyzer/home?{region}#/settings"
-            },
-            "accessanalyzer-analyzers": {
-                "name": "Analyzers",
-                "url": "/access-analyzer/home?{region}#/analyzers"
-            },
-            "accessanalyzer-archiverules": {
-                "name": "Archive rules",
-                "url": "/access-analyzer/home?{region}#/rules"
+                "url": "/access-analyzer/home?{region}#/settings",
+                "rank": 30
             }
         }
     },
@@ -3882,36 +4128,63 @@
     },
     "ec2imagebuilder": {
         "name": "EC2 Image Builder",
-        "url": "/imagebuilder/home?{region}#/pipelines",
+        "url": "/imagebuilder/home?{region}#/viewPipelines",
         "description": "A managed service to automate build, customize and deploy OS images",
         "menus": {
+            "ec2imagebuilder-imagepipelines": {
+                "name": "Image pipelines",
+                "url": "/imagebuilder/home?{region}#/viewPipelines",
+                "rank": 10
+            },
             "ec2imagebuilder-images": {
                 "name": "Images",
-                "url": "/imagebuilder/home?{region}#/images"
+                "url": "/imagebuilder/home?{region}#/images",
+                "rank": 20
             },
             "ec2imagebuilder-components": {
                 "name": "Components",
-                "url": "/imagebuilder/home?{region}#/components"
+                "url": "/imagebuilder/home?{region}#/viewComponents",
+                "rank": 30
             },
             "ec2imagebuilder-imagerecipes": {
                 "name": "Image recipes",
-                "url": "/imagebuilder/home?{region}#/imageRecipes"
-            },
-            "ec2imagebuilder-imagepipelines": {
-                "name": "Image pipelines",
-                "url": "/imagebuilder/home?{region}#/pipelines"
+                "url": "/imagebuilder/home?{region}#/imageRecipes",
+                "rank": 40
             },
             "ec2imagebuilder-containerrecipes": {
                 "name": "Container recipes",
-                "url": "/imagebuilder/home?{region}#/containerRecipes"
-            },
-            "ec2imagebuilder-distributionsettings": {
-                "name": "Distribution settings",
-                "url": "/imagebuilder/home?{region}#/distributionSettings"
+                "url": "/imagebuilder/home?{region}#/containerRecipes",
+                "rank": 50
             },
             "ec2imagebuilder-infrastructureconfiguration": {
                 "name": "Infrastructure configuration",
-                "url": "/imagebuilder/home?{region}#/infraConfigurations"
+                "url": "/imagebuilder/home?{region}#/infraConfigurations",
+                "rank": 60
+            },
+            "ec2imagebuilder-distributionsettings": {
+                "name": "Distribution settings",
+                "url": "/imagebuilder/home?{region}#/distributionSettings",
+                "rank": 70
+            },
+            "ec2imagebuilder-imageworkflows": {
+                "name": "Image workflows",
+                "url": "/imagebuilder/home?{region}#/workflows",
+                "rank": 80
+            },
+            "ec2imagebuilder-lifecyclepolicies": {
+                "name": "Lifecycle policies",
+                "url": "/imagebuilder/home?{region}#/lifecyclePolicies",
+                "rank": 90
+            },
+            "ec2imagebuilder-securityfindings": {
+                "name": "Security findings",
+                "url": "/imagebuilder/home?{region}#/securityFindings",
+                "rank": 100
+            },
+            "ec2imagebuilder-securityscanningsettings": {
+                "name": "Security scanning settings",
+                "url": "/imagebuilder/home?{region}#/securityScanningSettings",
+                "rank": 110
             }
         }
     },
