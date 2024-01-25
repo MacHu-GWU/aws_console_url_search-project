@@ -191,7 +191,7 @@
                 "rank": 10
             },
             "ec2-launchaninstance": {
-                "name": "Launch a new instance ",
+                "name": "Launch a new instance",
                 "url": "/ec2/home?{region}#LaunchInstances:",
                 "rank": 15
             },
@@ -202,7 +202,7 @@
                 "rank": 20
             },
             "ec2-amis": {
-                "name": "Amazon Machine Image",
+                "name": "Amazon Machine Image (AMI)",
                 "url": "/ec2/home?{region}#Images:",
                 "rank": 30
             },
@@ -222,12 +222,12 @@
                 "rank": 60
             },
             "ec2-elasticips": {
-                "name": "Elastic IPs",
+                "name": "Elastic IPs (EIP)",
                 "url": "/ec2/home?{region}#Addresses:",
                 "rank": 70
             },
             "ec2-networkinterfaces": {
-                "name": "Network Interfaces",
+                "name": "Network Interfaces (ENI)",
                 "url": "/ec2/home?{region}#NIC:",
                 "rank": 80
             },
@@ -281,7 +281,7 @@
                 "url": "/ec2/home?{region}#Lifecycle:"
             },
             "ec2-autoscalinggroups": {
-                "name": "Auto Scaling Groups",
+                "name": "Auto Scaling Groups (ASG)",
                 "url": "/ec2autoscaling/home?{region}#/details"
             },
             "ec2-reservedinstances": {
@@ -319,7 +319,7 @@
                 "rank": 20
             },
             "vpc-elasticips": {
-                "name": "Elastic IPs",
+                "name": "Elastic IPs (EIP)",
                 "url": "/vpcconsole/home?{region}#Addresses:",
                 "rank": 30
             },
@@ -329,13 +329,13 @@
                 "rank": 40
             },
             "vpc-internetgateways": {
-                "name": "Internet Gateways",
+                "name": "Internet Gateways (IGW)",
                 "url": "/vpcconsole/home?{region}#igws:",
                 "description": "An internet gateway is a horizontally scaled, redundant, and highly available VPC component that enables communication between your VPC and the internet.",
                 "rank": 50
             },
             "vpc-natgateways": {
-                "name": "NAT Gateways",
+                "name": "NAT Gateways (NGW)",
                 "url": "/vpcconsole/home?{region}#NatGateways:",
                 "description": "You can use a NAT gateway so that instances in a private subnet can connect to services outside your VPC but external services cannot initiate a connection with those instances.",
                 "rank": 60
@@ -719,7 +719,7 @@
         }
     },
     "cloudwatch": {
-        "name": "CloudWatch",
+        "name": "CloudWatch (CW)",
         "url": "/cloudwatch/home?{region}#",
         "description": "Monitor Resources and Applications",
         "emoji": "⛅  🕒",
@@ -914,7 +914,7 @@
         }
     },
     "sagemaker": {
-        "name": "SageMaker",
+        "name": "SageMaker (SM)",
         "url": "/sagemaker/home?{region}#",
         "description": "Build, Train, and Deploy Machine Learning Models",
         "rank": 170,

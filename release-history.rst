@@ -15,6 +15,19 @@ Backlog
 **Miscellaneous**
 
 
+0.3.1 (2024-01-25)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Features and Improvements**
+
+- Add support to use hard coded URL.
+- Add lots of service and menu.
+
+**Minor Improvements**
+
+- Now use "name" if "description" is not available.
+- Now the "id" field is also indexed in TextField.
+
+
 0.2.1 (2024-01-22)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 **Features and Improvements**
