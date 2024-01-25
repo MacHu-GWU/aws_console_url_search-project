@@ -58,6 +58,7 @@ def preprocess_query(query: T.Optional[str]) -> str:  # pragma: no cover
 # fmt: off
 fields = [
     sayt.IdField(name="id", stored=True, field_boost=10.0),
+    sayt.TextField(name="id_text", stored=True, field_boost=10.0),
     sayt.StoredField(name="srv_name"),
     sayt.StoredField(name="menu_name"),
     sayt.StoredField(name="url"),
@@ -77,6 +78,7 @@ fields = [
 class ServiceDocument:
     # fmt: off
     id: str = dataclasses.field()
+    id_text: str = dataclasses.field()
     srv_name: str = dataclasses.field()
     menu_name: T.Optional[str] = dataclasses.field()
     url: str = dataclasses.field()
@@ -99,6 +101,7 @@ class ServiceDocument:
             srv_text = service.name
         return cls(
             id=service.id,
+            id_text=service.id,
             srv_name=service.name,
             menu_name=None,
             url=service.url,
@@ -126,6 +129,7 @@ class ServiceDocument:
             menu_text = menu.name
         return cls(
             id=menu.id,
+            id_text=menu.id,
             srv_name=service.name,
             menu_name=menu.name,
             url=menu.url,
