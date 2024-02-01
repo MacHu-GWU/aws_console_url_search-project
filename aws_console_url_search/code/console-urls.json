@@ -786,13 +786,25 @@
         "emoji": "📦",
         "rank": 120,
         "menus": {
-            "ecr-registries": {
-                "name": "Registries",
-                "url": "/ecr/registries?{region}#"
+            "ecr-privaterepositories": {
+                "name": "Private Repositories",
+                "url": "/ecr/private-registry/repositories?{region}",
+                "rank": 10
             },
-            "ecr-repositories": {
-                "name": "Repositories",
-                "url": "/ecr/repositories?{region}#"
+            "ecr-createprivaterepositories": {
+                "name": "Create new Private Repository",
+                "url": "/ecr/create-repository?{region}",
+                "rank": 15
+            },
+            "ecr-publicrepositories": {
+                "name": "Public Repositories",
+                "url": "/ecr/public-registry/repositories?{region}",
+                "rank": 30
+            },
+            "ecr-createpublicrepositories": {
+                "name": "Create new Public Repository",
+                "url": "/ecr/create-repository?publicRepoCreate=true&{region}",
+                "rank": 35
             },
             "ecr-publicgallery": {
                 "name": "Public gallery",
@@ -1097,57 +1109,84 @@
     },
     "cloudfront": {
         "name": "CloudFront",
-        "url": "/cloudfront/home?{region}#",
+        "url": "/cloudfront/v4/home?{region}#/welcome",
         "description": "Global Content Delivery Network",
         "rank": 190,
         "menus": {
-            "cloudfront-fle": {
-                "name": "Field-level encryption",
-                "url": "/cloudfront/home?{region}#fle:"
-            },
-            "cloudfront-oai": {
-                "name": "Origin access identity",
-                "url": "/cloudfront/home?{region}#oai:"
-            },
-            "cloudfront-usage": {
-                "name": "Usage",
-                "url": "/cloudfront/home?{region}#usage_reports:"
-            },
-            "cloudfront-alarms": {
-                "name": "Alarms",
-                "url": "/cloudfront/home?{region}#alarms:"
-            },
-            "cloudfront-viewers": {
-                "name": "Viewers",
-                "url": "/cloudfront/home?{region}#viewers_reports:"
+            "cloudfront-distributions": {
+                "name": "Distributions",
+                "url": "/cloudfront/v4/home?{region}#/welcome",
+                "rank": 10
             },
             "cloudfront-policies": {
                 "name": "Policies",
-                "url": "/cloudfront/v2/home?{region}#/policies"
+                "url": "/cloudfront/v4/home?{region}#/policies/cache",
+                "rank": 20
             },
-            "cloudfront-publickey": {
-                "name": "Public key",
-                "url": "/cloudfront/home?{region}#publickey:"
-            },
-            "cloudfront-referrers": {
-                "name": "Top referrers",
-                "url": "/cloudfront/home?{region}#referers_report:"
+            "cloudfront-functions": {
+                "name": "Functions",
+                "url": "/cloudfront/v3/home?{region}#/functions",
+                "rank": 30
             },
             "cloudfront-monitoring": {
                 "name": "Monitoring",
-                "url": "/cloudfront/v2/home?{region}#/monitoring"
+                "url": "/cloudfront/v4/home#/monitoring",
+                "rank": 110
             },
-            "cloudfront-distributions": {
-                "name": "Distributions",
-                "url": "/cloudfront/home?{region}#"
+            "cloudfront-alarms": {
+                "name": "Alarms",
+                "url": "/cloudfront/v4/home#/alarms",
+                "rank": 120
             },
-            "cloudfront-popularobjects": {
-                "name": "Popular objects",
-                "url": "/cloudfront/home?{region}#popular_urls:"
+            "cloudfront-logs": {
+                "name": "Logs",
+                "url": "/cloudfront/v4/home#/logs",
+                "rank": 130
             },
             "cloudfront-cachestatistics": {
                 "name": "Cache statistics",
-                "url": "/cloudfront/home?{region}#cache_stat_reports:"
+                "url": "/cloudfront/v3/home#/cache",
+                "rank": 210
+            },
+            "cloudfront-popularobjects": {
+                "name": "Popular objects",
+                "url": "/cloudfront/v3/home#/popular_urls",
+                "rank": 220
+            },
+            "cloudfront-referrers": {
+                "name": "Top referrers",
+                "url": "/cloudfront/v3/home#/referrers",
+                "rank": 230
+            },
+            "cloudfront-usage": {
+                "name": "Usage",
+                "url": "/cloudfront/v3/home#/usage",
+                "rank": 240
+            },
+            "cloudfront-viewers": {
+                "name": "Viewers",
+                "url": "/cloudfront/v3/home#/viewers/devices",
+                "rank": 250
+            },
+            "cloudfront-oai": {
+                "name": "Origin access identity",
+                "url": "/cloudfront/v4/home#/originAccess",
+                "rank": 310
+            },
+            "cloudfront-fle": {
+                "name": "Field-level encryption",
+                "url": "/cloudfront/v4/home#/encryption",
+                "rank": 320
+            },
+            "cloudfront-publickey": {
+                "name": "Public key",
+                "url": "/cloudfront/v4/home#/publickey",
+                "rank": 410
+            },
+            "cloudfront-keygroups": {
+                "name": "Key Groups",
+                "url": "/cloudfront/v4/home#/keygrouplist",
+                "rank": 420
             }
         }
     },
@@ -1640,37 +1679,44 @@
         "description": "Managed Hadoop Framework",
         "rank": 300,
         "menus": {
-            "emr-events": {
-                "name": "Events",
-                "url": "/elasticmapreduce/home?{region}#events:"
-            },
             "emr-clusters": {
                 "name": "Clusters",
-                "url": "/elasticmapreduce/home?{region}#cluster-list:"
+                "url": "/emr/home?{region}#/clusters",
+                "rank": 10
             },
             "emr-notebooks": {
-                "name": "Notebooks",
-                "url": "/elasticmapreduce/home?{region}#notebooks-list:"
+                "name": "Notebooks and Git Repos",
+                "url": "/emr/home?{region}#/notebooks",
+                "rank": 20
+            },
+            "emr-events": {
+                "name": "Events",
+                "url": "/emr/home?{region}#/events",
+                "rank": 30
+            },
+            "emr-blockpublicaccess": {
+                "name": "Block public access",
+                "url": "/emr/home?{region}#/bpa",
+                "rank": 40
+            },
+            "emr-securityconfigurations": {
+                "name": "Security configurations",
+                "url": "/emr/home?{region}#/securityConfigs",
+                "rank": 50
+            },
+            "emr-virtualclusters": {
+                "name": "Virtual clusters",
+                "url": "/emr/home?{region}#/eks/clusters",
+                "rank": 60
+            },
+            "emr-studios": {
+                "name": "EMR Studios",
+                "url": "/emr/home?{region}#/studios",
+                "rank": 70
             },
             "emr-vpcsubnets": {
                 "name": "VPC subnets",
                 "url": "/elasticmapreduce/home?{region}#manage-subnets:"
-            },
-            "emr-gitrepositories": {
-                "name": "Git repositories",
-                "url": "/elasticmapreduce/home?{region}#git-repositories-list:"
-            },
-            "emr-virtualclusters": {
-                "name": "Virtual clusters",
-                "url": "/elasticmapreduce/home?{region}#virtual-cluster-list:"
-            },
-            "emr-blockpublicaccess": {
-                "name": "Block public access",
-                "url": "/elasticmapreduce/home?{region}#block-public-access:"
-            },
-            "emr-securityconfigurations": {
-                "name": "Security configurations",
-                "url": "/elasticmapreduce/home?{region}#security-configurations-list:"
             }
         }
     },
@@ -2180,19 +2226,19 @@
         "menus": {
             "cloudtrail-trails": {
                 "name": "Trails",
-                "url": "/cloudtrail/home?{region}#/trails"
+                "url": "/cloudtrailv2/home?{region}#/trails"
             },
             "cloudtrail-insights": {
                 "name": "Insights",
-                "url": "/cloudtrail/home?{region}#/insights"
+                "url": "/cloudtrailv2/home?{region}#/insights"
             },
             "cloudtrail-dashboard": {
                 "name": "Dashboard",
-                "url": "/cloudtrail/home?{region}#/dashboard"
+                "url": "/cloudtrailv2/home?{region}#/dashboard"
             },
             "cloudtrail-eventhistory": {
                 "name": "Event history",
-                "url": "/cloudtrail/home?{region}#/events"
+                "url": "/cloudtrailv2/home?{region}#/events?ReadOnly=false"
             }
         }
     },
@@ -3057,6 +3103,23 @@
             "datasync-locations": {
                 "name": "Locations",
                 "url": "/datasync/home?{region}#/locations"
+            }
+        }
+    },
+    "datazone": {
+        "name": "DataZone",
+        "url": "/datazone/home?{region}#/",
+        "description": "Unlock data across organizational boundaries with built-in governance",
+        "terms": "data zone",
+        "menus": {
+            "datazone-domains": {
+                "name": "Domains",
+                "url": "/datazone/home?{region}#/domains",
+                "description": "an organizing entity for connecting together your assets, users, and their projects."
+            },
+            "datazone-associateddomains": {
+                "name": "Associated Domains",
+                "url": "/datazone/home?{region}#/associatedDomains"
             }
         }
     },
@@ -3937,6 +4000,23 @@
             "organizations-invitations": {
                 "name": "Invitations",
                 "url": "/organizations/v2/home/accounts",
+                "rank": 20
+            }
+        }
+    },
+    "servicequotas": {
+        "name": "Service Quotas",
+        "url": "/servicequotas/home?{region}#",
+        "description": "View and manage AWS quotas",
+        "menus": {
+            "servicequotas-awsservices": {
+                "name": "AWS Services",
+                "url": "/servicequotas/home/services",
+                "rank": 10
+            },
+            "servicequotas-quotarequesthistory": {
+                "name": "Quota request history",
+                "url": "/servicequotas/home/requests",
                 "rank": 20
             }
         }
